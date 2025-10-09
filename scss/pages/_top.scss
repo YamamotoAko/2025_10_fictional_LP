@@ -1,0 +1,54 @@
+@use '../global/index' as *;
+@use '../common/index' as *;
+// globalディレクトリにはCSS変数とミックスインが入っているので、それを呼び出し
+// asによる名前空間指定でアスタリスク(*)を使うと、index、の記述が省略できます。
+html {
+  //   font-feature-settings: 'palt';
+  font-size: 62.5%;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  body {
+    #top {
+      min-width: 390px;
+      height: 844px;
+      background-image: url('../images/top_sp.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      #logo {
+        display: block;
+        padding: 1.6rem;
+        font-family: 'Bodoni Moda', serif;
+        font-size: 1.6rem;
+        color: $whiteTextColor;
+        text-decoration: none;
+      }
+      .title {
+        font-size: 4.8rem;
+        text-align: center;
+        color: $whiteTextColor;
+
+        span {
+          display: block;
+          line-height: 1;
+          margin-bottom: 0.2em;
+        }
+
+        span:nth-child(2),
+        :last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .topText {
+        display: block;
+        font-size: 1.6rem;
+        text-align: center;
+        margin-top: 1.6rem;
+        color: $whiteTextColor;
+        font-feature-settings: 'palt';
+      }
+    }
+  }
+}
