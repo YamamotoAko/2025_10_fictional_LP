@@ -286,25 +286,57 @@ html img {
   max-width: 100%;
   height: auto;
 }
-html body #top {
-  min-width: 390px;
-  height: 844px;
-  background-image: url("../images/top_sp.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-html body #top #logo {
-  display: block;
-  padding: 1.6rem;
-  font-family: "Bodoni Moda", serif;
+html body #purchase {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 330px;
+  height: 61px;
+  display: flex;
+  border-radius: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1.6rem;
+  background: linear-gradient(90deg, #ff5817, #ffea00);
+  background-size: 150% 100%;
+  background-position: left;
+  transition: background-position 0.3s ease-in-out;
   font-size: 1.6rem;
   color: #fff;
-  text-decoration: none;
+}
+html body #purchase .off {
+  font-size: 2.4rem;
+}
+html body #purchase .arrow {
+  font-size: 2.4rem;
+}
+html body #purchase:hover {
+  background-position: right;
+}
+html body #top {
+  margin: 0 auto;
+  padding: 3rem;
+  max-width: 600px;
+  height: 844px;
+  background-image: url("../images/topImg_s.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body #top .logo {
+  align-self: flex-end;
 }
 html body #top .title {
   font-size: 4.8rem;
-  text-align: center;
+  font-weight: 700;
   color: #fff;
+  text-align: center;
+  padding-top: 34px;
 }
 html body #top .title span {
   display: block;
@@ -318,8 +350,85 @@ html body #top .title :last-child {
 html body #top .topText {
   display: block;
   font-size: 1.6rem;
-  text-align: center;
+  font-weight: 500;
   margin-top: 1.6rem;
   color: #fff;
   font-feature-settings: "palt";
+  text-align: center;
+}
+html body #product_concept {
+  max-width: 600px;
+  background-color: #e8ddd3;
+  margin: 0 auto;
+}
+html body #product_concept .concept_wraper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+  isolation: isolate;
+}
+html body #product_concept .concept_wraper .circle-bg {
+  position: absolute;
+  width: 330px;
+  height: 300px;
+  background-color: rgba(253, 251, 248, 0.65);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 0;
+}
+html body #product_concept .concept_wraper #conceptText {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body #product_concept .concept_wraper #conceptText .secTitle {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 24px;
+}
+html body #product_concept .concept_wraper #conceptText #conceptText,
+html body #product_concept .concept_wraper #conceptText p {
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #2c3e3d;
+}
+html body #product_concept .imgContainer {
+  position: relative;
+  max-width: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+html body #product_concept .imgContainer #ani_item,
+html body #product_concept .imgContainer #ani_cica,
+html body #product_concept .imgContainer #ani_sea,
+html body #product_concept .imgContainer #ani_tangerine {
+  position: absolute;
+}
+html body #product_concept .imgContainer #ani_item {
+  top: 0;
+  left: 20%;
+  margin: 0 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+html body #product_concept .imgContainer #ani_cica {
+  top: 10%;
+  right: 5%;
+}
+html body #product_concept .imgContainer #ani_sea {
+  bottom: 10%;
+  left: 30%;
+}
+html body #product_concept .imgContainer #ani_tangerine {
+  bottom: 10px;
+  right: 5%;
 }/*# sourceMappingURL=style.css.map */

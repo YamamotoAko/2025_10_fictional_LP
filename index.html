@@ -8,13 +8,20 @@
     <!-- GoogleやYahooなどの検索エンジンに検索されなくするメタタグ -->
     <meta name="robots" content="noindex,nofollow" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/rellax/rellax.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <button id="purchase">今だけ20％OFFで購入</button>
+    <button id="purchase">
+      <p>今だけ<span class="off">20％OFF</span>で購入</p>
+      <span class="arrow">›</span>
+    </button>
 
     <!-- ファーストビュー -->
     <section id="top">
-      <p id="logo"><a href="index.html">PureDream</a></p>
+      <div class="logo">
+        <a href="#"><img src="images/logo.png" alt="ロゴ" /></a>
+      </div>
       <h1 class="title">
         <span>pure</span>
         <span>solution</span>
@@ -25,26 +32,52 @@
 
     <!-- セクション01 写真のアニメーション -->
     <section id="product_concept">
-      <div id="conceptText">
-        <h2 class="secTitle">済州島の自然がとどける</h2>
-        <p>
-          「忙しい現代女性の肌に、自然の力で休息を」<br />
-          をコンセプトに、 皮膚科医と共同開発。<br />
-          オーガニック成分にこだわりながら、<br />
-          科学的エビデンスに基づいた処方で、<br />
-          忙しい日常でも続けられるシンプルで<br />
-          効果的なスキンケアを実現。
-        </p>
+      <div class="concept_wraper">
+        <div class="circle-bg"></div>
+        <div id="conceptText">
+          <h2 class="secTitle">済州島の自然がとどける</h2>
+          <p>
+            「忙しい現代女性の肌に、自然の力で休息を」<br />
+            をコンセプトに、 皮膚科医と共同開発。<br />
+            オーガニック成分にこだわりながら、<br />
+            科学的エビデンスに基づいた処方で、<br />
+            忙しい日常でも続けられるシンプルで<br />
+            効果的なスキンケアを実現。
+          </p>
+        </div>
       </div>
       <div class="imgContainer">
-        <div class="aniImg">
+        <div
+          class="rellax"
+          id="ani_item"
+          data-rellax-speed="-0.5"
+          data-rellax-percentage="0"
+        >
           <img src="images/ani_Item_s.png" alt="商品画像" />
         </div>
-        <div class="aniImg">
+        <div
+          class="rellax"
+          id="ani_cica"
+          data-rellax-speed="0.5"
+          data-rellax-horizontal="true"
+          data-rellax-percentage="0.5"
+        >
           <img src="images/ani_cica_s.png" alt="シカの葉" />
         </div>
-        <div class="aniImg"><img src="images/ani_sea_s.png" alt="海" /></div>
-        <div class="aniImg">
+        <div
+          class="rellax"
+          id="ani_sea"
+          data-rellax-speed="-2"
+          data-rellax-percentage="0"
+        >
+          <img src="images/ani_sea_s.png" alt="海" />
+        </div>
+        <div
+          class="rellax"
+          id="ani_tangerine"
+          data-rellax-speed="-2"
+          data-rellax-percentage="0"
+        >
           <img src="images/ani_tangerine_s.png" alt="みかん" />
         </div>
       </div>

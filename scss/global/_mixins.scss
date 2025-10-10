@@ -1,0 +1,9 @@
+@use 'variables' as *;
+@use '../common/index' as *;
+@mixin secTitle {
+  font-family: $mainTextFont;
+  font-size: 2.4rem;
+  font-weight: $medium;
+  line-height: 1;
+  color: $titleColor;
+}
