@@ -286,6 +286,11 @@ html img {
   max-width: 100%;
   height: auto;
 }
+html body {
+  max-width: 390px;
+  margin: 0 auto;
+  font-family: "Noto Sans JP", sans-serif;
+}
 html body #purchase {
   position: fixed;
   bottom: 40px;
@@ -431,4 +436,52 @@ html body #product_concept .imgContainer #ani_sea {
 html body #product_concept .imgContainer #ani_tangerine {
   bottom: 10px;
   right: 5%;
+}
+html body #line_up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 6rem;
+  border-bottom: 1px solid #2c3e3d;
+  gap: 3rem;
+  background-color: #f5f1ed;
+}
+html body #line_up .line_up_heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+html body #line_up .line_up_lead {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+html body #line_up .line_up_text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2;
+  text-align: center;
+}
+html body #product_card {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f1ed;
+  padding: 6rem 3rem;
+}
+html body #product_card #productImg #productImg img {
+  width: 100%;
+  height: 100%;
+}
+html body #product_card .product-details {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+html body #product_card .product-details span:nth-child(1) {
+  font-size: 1.4rem;
+}
+html body #product_card .product-details span:nth-child(2) {
+  font-size: 2rem;
+}
+html body #product_card .product-details span:nth-child(3) {
+  font-size: 1.6rem;
 }/*# sourceMappingURL=style.css.map */

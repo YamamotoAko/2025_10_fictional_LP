@@ -3,13 +3,16 @@
 // globalディレクトリにはCSS変数とミックスインが入っているので、それを呼び出し
 // asによる名前空間指定でアスタリスク(*)を使うと、index、の記述が省略できます。
 html {
-  //   font-feature-settings: 'palt';
+    // font-feature-settings: 'palt';
   font-size: 62.5%;
   img {
     max-width: 100%;
     height: auto;
   }
   body {
+    max-width: 390px;
+    margin: 0 auto;
+    font-family: $mainTextFont;
     // 固定ボタン
     #purchase {
       position: fixed;
@@ -168,6 +171,68 @@ html {
           right: 5%;
         }
       }
+    }
+
+    // セクション02　skincare lineup
+    #line_up{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-block: 6rem;
+      border-bottom: 1px solid $textColor;
+
+      gap: 3rem;
+      background-color: $mainbg02;
+      .line_up_heading{
+        font-size: 2.4rem;
+        font-weight: $bold;
+      }
+      .line_up_lead{
+        font-size: 2.4rem;
+        font-weight: $medium;
+        text-align: center;
+      }
+      .line_up_text{
+        font-size: 1.6rem;
+        font-weight: $regular;
+        line-height: 2;
+        text-align: center;
+      }
+    }
+
+    // <!-- セクション03 商品紹介 -->
+    #product_card{
+      display: flex;
+      flex-direction: column;
+      background-color: $mainbg02;
+      padding: 6rem 3rem;
+
+      #productImg{
+        // align-self: center;
+        
+        #productImg img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .product-details {
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+
+  span:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  span:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  span:nth-child(3) {
+    font-size: 1.6rem;
+  }
+}
+
     }
   }
 }
