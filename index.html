@@ -107,9 +107,9 @@
         <span>ピュアソリューションエッセンス</span>
         <span>内容量　100ml</span>
       </p>
-      <div class="product-prices">
-        <p class="regular-price">通常価格　4,950円</p>
-        <p class="special-price">特別価格　3,960円</p>
+      <div class="product_prices">
+        <p class="regular_price">通常価格　<span class="old">4,950円</span></p>
+        <p class="special_price">特別価格　<span class="new">3,960円</span></p>
       </div>
     </section>
 
@@ -128,43 +128,51 @@
 
     <!-- セクション05 特徴成分 -->
     <section id="ingredients">
-      <h3>特徴成分</h3>
+      <h3>・特徴成分</h3>
 
       <div class="ingredient_list">
         <div class="ingredients_item">
           <div class="ingredients_img">
             <img src="images/ingredient_cica_s.png" alt="シカの葉" />
           </div>
-          <h4>ツボクサ由来シカ成分</h4>
-          <p>炎症鎮静作用 <br />コラーゲン合成促進</p>
+          <div class="ingredients_text">
+            <h4>ツボクサ由来シカ成分</h4>
+            <p>炎症鎮静作用 <br />コラーゲン合成促進</p>
+          </div>
         </div>
         <div class="ingredients_item">
           <div class="ingredients_img">
             <img src="images/ingredient_hyal_s.png" alt="発酵ヒアルロン酸" />
           </div>
-          <h4>発酵ヒアルロン酸</h4>
-          <p>角層深部まで浸透保湿 <br />乾燥小じわをケア</p>
+          <div class="ingredients_text">
+            <h4>発酵ヒアルロン酸</h4>
+            <p>角層深部まで浸透保湿 <br />乾燥小じわをケア</p>
+          </div>
         </div>
         <div class="ingredients_item">
           <div class="ingredients_img">
             <img src="images/ingredient_chamomile_s.png" alt="カモミール" />
           </div>
-          <h4>カモミールエキス</h4>
-          <p>敏感肌ケア <br />肌荒れ鎮静</p>
+          <div class="ingredients_text">
+            <h4>カモミールエキス</h4>
+            <p>敏感肌ケア <br />肌荒れ鎮静</p>
+          </div>
         </div>
         <div class="ingredients_item">
           <div class="ingredients_img">
             <img src="images/ingredient_tangerine_s.png" alt="みかん" />
           </div>
-          <h4>チェジュタンジェリンエキス</h4>
-          <p>ブライトニング <br />抗酸化作用</p>
+          <div class="ingredients_text">
+            <h4>タンジェリンエキス</h4>
+            <p>ブライトニング <br />抗酸化作用</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- セクション06 口コミ -->
     <section id="reviews">
-      <h2 class="secTitle">使った人のリアルな声</h2>
+      <h2 class="review_title">使った人のリアルな声</h2>
       <div class="reviews_card">
         <div class="review_header">
           <div class="avatar">M.S</div>
@@ -179,7 +187,7 @@
           <span class="score">5.0</span>
         </div>
 
-        <h4 class="title">「30秒でできるから、続けられる！」</h4>
+        <h4 class="review_read">「30秒でできるから、続けられる！」</h4>
         <p class="review_text">
           仕事が忙しくて、スキンケアに時間をかけられない日々でした。でもこの化粧水は洗顔後にサッと馴染ませるだけ。ベタつかないのに、翌朝までしっとり。2週間で肌のキメが整ってきて、ファンデーションのノリが全然違います。
         </p>
@@ -198,7 +206,7 @@
           <span class="score">5.0</span>
         </div>
 
-        <h4 class="title">「肌荒れが落ち着いてメイクが楽しい」</h4>
+        <h4 class="review_read">「肌荒れが落ち着いてメイクが楽しい」</h4>
         <p class="review_text">
           ストレスでニキビができやすく、季節の変わり目はいつも肌が荒れていました。シカ成分が気になって試してみたら、使い始めて3週間くらいで赤みが落ち着いてきて。今では肌荒れが気にならなくなって、毎朝のメイクが楽しみになりました。オーガニックなのも安心できるポイントです。
         </p>
@@ -217,7 +225,7 @@
           <span class="score">5.0</span>
         </div>
 
-        <h4 class="title">「敏感肌でも安心して使えました」</h4>
+        <h4 class="review_read">「敏感肌でも安心して使えました」</h4>
         <p class="review_text">
           敏感肌で新しい化粧品を試すのが怖かったんですが、7つの無添加と聞いて挑戦。刺激もなく、むしろ肌が落ち着く感じがします。パソコン作業で疲れた肌も、これを使うと翌朝ふっくら。済州島の自然成分というのも魅力的で、使うたびに癒されています。
         </p>
@@ -225,12 +233,14 @@
     </section>
 
     <!-- セクション07 選ばれる理由 -->
-    <section id="3reasons">
-      <h2 class="secTitle">Pure Solution Essence <br />選ばれる理由</h2>
+    <section id="reasons">
+      <h2 class="secTitle">
+        <span>Pure Solution Essence</span> <br />選ばれる理由
+      </h2>
 
       <div class="points">
         <div class="icon">
-          <p class="iconTitle">additive <br />free</p>
+          <p class="iconTitle01">additive <br />free</p>
           <div class="iconImg">
             <img src="images/additivefree.png" alt="無添加のアイコン" />
           </div>
@@ -251,7 +261,7 @@
       </div>
       <div class="points">
         <div class="icon">
-          <p class="iconTitle">Organic</p>
+          <p class="iconTitle02">Organic</p>
           <div class="iconImg">
             <img src="images/oganic.png" alt="オーガニックのアイコン" />
           </div>
@@ -268,7 +278,7 @@
       </div>
       <div class="points">
         <div class="icon">
-          <p class="iconTitle">Easy</p>
+          <p class="iconTitle03">Easy</p>
           <div class="iconImg">
             <img src="images/easy.png" alt="時短のアイコン" />
           </div>

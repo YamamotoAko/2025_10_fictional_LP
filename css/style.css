@@ -467,6 +467,10 @@ html body #product_card {
   background-color: #f5f1ed;
   padding: 6rem 3rem;
 }
+html body #product_card #productImg {
+  width: auto;
+  max-height: 455px;
+}
 html body #product_card #productImg #productImg img {
   width: 100%;
   height: 100%;
@@ -478,10 +482,239 @@ html body #product_card .product-details {
 }
 html body #product_card .product-details span:nth-child(1) {
   font-size: 1.4rem;
+  color: #6b7c7a;
+  line-height: 1;
 }
 html body #product_card .product-details span:nth-child(2) {
   font-size: 2rem;
 }
 html body #product_card .product-details span:nth-child(3) {
   font-size: 1.6rem;
+}
+html body #product_card .product_prices {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-block-start: 2.4rem;
+}
+html body #product_card .product_prices .regular_price {
+  font-size: 1.6rem;
+  color: #6b7c7a;
+  line-height: 1;
+}
+html body #product_card .product_prices .regular_price .old {
+  position: relative;
+  display: inline-block;
+}
+html body #product_card .product_prices .regular_price .old::after {
+  content: "";
+  position: absolute;
+  left: -0.5em;
+  right: -0.5em;
+  top: 50%;
+  height: 1px;
+  background-color: #6b7c7a;
+  transform: translateY(-50%);
+}
+html body #product_card .product_prices .special_price {
+  font-size: 1.6rem;
+  color: #2c3e3d;
+  line-height: 1;
+}
+html body #product_card .product_prices .special_price .new {
+  font-size: 3.6rem;
+}
+html body #product_text {
+  background-color: #f5f1ed;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding-inline: 3rem;
+  padding-block-end: 6rem;
+}
+html body #product_text h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+html body #product_text p {
+  font-size: 1.6rem;
+}
+html body #ingredients {
+  background-color: #f5f1ed;
+  padding-inline: 3rem;
+  padding-block-end: 6rem;
+}
+html body #ingredients h3 {
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 400;
+}
+html body #ingredients .ingredient_list {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: 3rem;
+  border-bottom: 1px solid #6b7c7a;
+}
+html body #ingredients .ingredients_item {
+  display: flex;
+  gap: 3rem;
+  padding-block-end: 3rem;
+}
+html body #ingredients .ingredients_text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+html body #ingredients .ingredients_text h4 {
+  font-size: 1.6rem;
+  color: #2c3e3d;
+  font-weight: 400;
+  line-height: 1;
+}
+html body #ingredients .ingredients_text p {
+  font-size: 1.4rem;
+  color: #6b7c7a;
+  line-height: 1.5;
+}
+html body #reviews {
+  background-image: url(../images/review_bg.png);
+  padding: 3rem;
+}
+html body #reviews .review_title {
+  display: block;
+  padding-block: 3rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+html body #reviews .reviews_card {
+  background-color: #fdfbf8;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block-end: 3rem;
+}
+html body #reviews .reviews_card .review_header {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+html body #reviews .reviews_card .review_header .avatar {
+  background-color: #c9ae9e;
+  width: 8rem;
+  height: 8rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: #fdfbf8;
+}
+html body #reviews .reviews_card .review_header .user {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+html body #reviews .reviews_card .review_header .user .userName {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c3e3d;
+  line-height: 1;
+}
+html body #reviews .reviews_card .review_header .user .userMeta {
+  font-size: 1.4rem;
+  color: #2c3e3d;
+  line-height: 1;
+}
+html body #reviews .reviews_card .rating {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+html body #reviews .reviews_card .rating .stars {
+  font-size: 2rem;
+  color: #ffea00;
+}
+html body #reviews .reviews_card .rating .score {
+  font-size: 1.6rem;
+  color: #2c3e3d;
+}
+html body #reviews .reviews_card .review_read {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+html body #reviews .reviews_card .review_text {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+html body #reasons {
+  background-color: #f5f1ed;
+  padding: 6rem 3rem;
+}
+html body #reasons .secTitle {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 2rem;
+}
+html body #reasons .secTitle span {
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 0.2em;
+}
+html body #reasons .points {
+  display: flex;
+  gap: 3rem;
+  padding-block: 3rem 6rem;
+  border-bottom: 1px solid #6b7c7a;
+}
+html body #reasons .points .icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+html body #reasons .points .icon .iconTitle01 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a8cddb;
+  text-align: center;
+}
+html body #reasons .points .icon .iconTitle02 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a8b5a0;
+  text-align: center;
+}
+html body #reasons .points .icon .iconTitle03 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #6b7c7a;
+  text-align: center;
+}
+html body #reasons .points .pointText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+html body #reasons .points .pointText .point123 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #a67d6d;
+}
+html body #reasons .points .pointText h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+html body #reasons .points .pointText .point_details {
+  font-size: 1.4rem;
+  line-height: 1.5;
 }/*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@
 // globalディレクトリにはCSS変数とミックスインが入っているので、それを呼び出し
 // asによる名前空間指定でアスタリスク(*)を使うと、index、の記述が省略できます。
 html {
-    // font-feature-settings: 'palt';
+  // font-feature-settings: 'palt';
   font-size: 62.5%;
   img {
     max-width: 100%;
@@ -174,7 +174,7 @@ html {
     }
 
     // セクション02　skincare lineup
-    #line_up{
+    #line_up {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -183,16 +183,16 @@ html {
 
       gap: 3rem;
       background-color: $mainbg02;
-      .line_up_heading{
+      .line_up_heading {
         font-size: 2.4rem;
         font-weight: $bold;
       }
-      .line_up_lead{
+      .line_up_lead {
         font-size: 2.4rem;
         font-weight: $medium;
         text-align: center;
       }
-      .line_up_text{
+      .line_up_text {
         font-size: 1.6rem;
         font-weight: $regular;
         line-height: 2;
@@ -201,38 +201,278 @@ html {
     }
 
     // <!-- セクション03 商品紹介 -->
-    #product_card{
+    #product_card {
       display: flex;
       flex-direction: column;
       background-color: $mainbg02;
       padding: 6rem 3rem;
 
-      #productImg{
-        // align-self: center;
-        
-        #productImg img{
+      #productImg {
+        width: auto;
+        max-height: 455px;
+
+        #productImg img {
           width: 100%;
           height: 100%;
         }
       }
       .product-details {
-  line-height: 1.5;
-  display: flex;
-  flex-direction: column;
+        line-height: 1.5;
+        display: flex;
+        flex-direction: column;
 
-  span:nth-child(1) {
-    font-size: 1.4rem;
-  }
+        span:nth-child(1) {
+          font-size: 1.4rem;
+          color: $subTextColor;
+          line-height: 1;
+        }
 
-  span:nth-child(2) {
-    font-size: 2rem;
-  }
+        span:nth-child(2) {
+          font-size: 2rem;
+        }
 
-  span:nth-child(3) {
-    font-size: 1.6rem;
-  }
-}
+        span:nth-child(3) {
+          font-size: 1.6rem;
+        }
+      }
+      .product_prices {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-block-start: 2.4rem;
+        .regular_price {
+          font-size: 1.6rem;
+          color: $subTextColor;
+          line-height: 1;
+          .old {
+            position: relative;
+            display: inline-block;
+          }
 
+          .old::after {
+            content: '';
+            position: absolute;
+            left: -0.5em;
+            right: -0.5em;
+            top: 50%;
+            height: 1px;
+            background-color: $subTextColor;
+            transform: translateY(-50%);
+          }
+        }
+        .special_price {
+          font-size: 1.6rem;
+          color: $textColor;
+          line-height: 1;
+
+          .new {
+            font-size: 3.6rem;
+          }
+        }
+      }
+    }
+
+    // <!-- セクション04 商品説明 -->
+    #product_text {
+      background-color: $mainbg02;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      padding-inline: 3rem;
+      padding-block-end: 6rem;
+      h2 {
+        font-size: 2rem;
+        font-weight: $medium;
+        line-height: 1.5;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    // <!-- セクション05 特徴成分 -->
+    #ingredients {
+      background-color: $mainbg02;
+      padding-inline: 3rem;
+      padding-block-end: 6rem;
+      h3 {
+        display: inline-block;
+        font-size: 2rem;
+        line-height: 1;
+        font-weight: $regular;
+      }
+      .ingredient_list {
+        display: flex;
+        flex-direction: column;
+        padding-block-end: 3rem;
+        border-bottom: 1px solid $subTextColor;
+      }
+      .ingredients_item {
+        display: flex;
+        gap: 3rem;
+        padding-block-end: 3rem;
+      }
+      .ingredients_text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h4 {
+          font-size: 1.6rem;
+          color: $textColor;
+          font-weight: $regular;
+          line-height: 1;
+        }
+        p {
+          font-size: 1.4rem;
+          color: $subTextColor;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    // <!-- セクション06 口コミ -->
+    #reviews {
+      background-image: url(../images/review_bg.png);
+      padding: 3rem;
+
+      .review_title {
+        display: block;
+        padding-block: 3rem;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: $medium;
+        color: $titleColor;
+      }
+      .reviews_card {
+        background-color: $review;
+        padding: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-block-end: 3rem;
+        .review_header {
+          display: flex;
+          gap: 3rem;
+          align-items: center;
+          .avatar {
+            background-color: $avatar;
+            width: 8rem;
+            height: 8rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            color: $review;
+          }
+          .user {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            .userName {
+              font-size: 1.6rem;
+              font-weight: $medium;
+              color: $textColor;
+              line-height: 1;
+            }
+            .userMeta {
+              font-size: 1.4rem;
+              color: $textColor;
+              line-height: 1;
+            }
+          }
+        }
+        .rating {
+          display: flex;
+          gap: 1.6rem;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+          .stars {
+            font-size: 2rem;
+            color: $star;
+          }
+          .score {
+            font-size: 1.6rem;
+            color: $textColor;
+          }
+        }
+        .review_read {
+          font-size: 1.6rem;
+          font-weight: $medium;
+          text-align: center;
+        }
+        .review_text {
+          font-size: 1.4rem;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    // <!-- セクション07 選ばれる理由 -->
+    #reasons {
+      background-color: $mainbg02;
+      padding: 6rem 3rem;
+      .secTitle {
+        color: $titleColor;
+        text-align: center;
+        span {
+          font-size: 2.4rem;
+          line-height: 1;
+          font-weight: $medium;
+          margin-bottom: 0.2em;
+        }
+        font-size: 2rem;
+      }
+      .points {
+        display: flex;
+        gap: 3rem;
+        padding-block: 3rem 6rem;
+        border-bottom: 1px solid $subTextColor;
+        .icon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          .iconTitle01 {
+            font-size: 1.4rem;
+            font-weight: $bold;
+            color: $babyblue;
+            text-align: center;
+          }
+          .iconTitle02 {
+            font-size: 1.4rem;
+            font-weight: $bold;
+            color: $babygreen;
+            text-align: center;
+          }
+          .iconTitle03 {
+            font-size: 1.4rem;
+            font-weight: $bold;
+            color: $subTextColor;
+            text-align: center;
+          }
+        }
+        .pointText {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          .point123 {
+            font-size: 1.4rem;
+            font-weight: $medium;
+            color: $point123;
+          }
+          h4 {
+            font-size: 1.6rem;
+            font-weight: $medium;
+          }
+          .point_details {
+            font-size: 1.4rem;
+            line-height: 1.5;
+          }
+        }
+      }
     }
   }
 }
