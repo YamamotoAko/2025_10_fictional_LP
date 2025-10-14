@@ -280,6 +280,7 @@ progress {
 }
 
 html {
+  font-feature-settings: "palt";
   font-size: 62.5%;
 }
 html img {
@@ -287,7 +288,6 @@ html img {
   height: auto;
 }
 html body {
-  max-width: 390px;
   margin: 0 auto;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -355,11 +355,17 @@ html body #top .title :last-child {
 html body #top .topText {
   display: block;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: 1.2;
   margin-top: 1.6rem;
   color: #fff;
   font-feature-settings: "palt";
   text-align: center;
+}
+@media (500px < width) {
+  html body #top .topText {
+    font-size: 2.4rem;
+  }
 }
 html body #product_concept {
   max-width: 600px;
@@ -392,7 +398,6 @@ html body #product_concept .concept_wraper #conceptText {
   align-items: center;
 }
 html body #product_concept .concept_wraper #conceptText .secTitle {
-  font-family: "Noto Sans JP", sans-serif;
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1;
@@ -400,11 +405,22 @@ html body #product_concept .concept_wraper #conceptText .secTitle {
   text-align: center;
   margin-bottom: 24px;
 }
+@media (500px < width) {
+  html body #product_concept .concept_wraper #conceptText .secTitle {
+    font-size: 3.2rem;
+  }
+}
 html body #product_concept .concept_wraper #conceptText #conceptText,
 html body #product_concept .concept_wraper #conceptText p {
   font-size: 1.6rem;
   line-height: 2;
   color: #2c3e3d;
+}
+@media (500px < width) {
+  html body #product_concept .concept_wraper #conceptText #conceptText,
+  html body #product_concept .concept_wraper #conceptText p {
+    font-size: 2rem;
+  }
 }
 html body #product_concept .imgContainer {
   position: relative;
@@ -438,8 +454,11 @@ html body #product_concept .imgContainer #ani_tangerine {
   right: 5%;
 }
 html body #line_up {
+  margin: 0 auto;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
+  align-self: center;
   align-items: center;
   padding-block: 6rem;
   border-bottom: 1px solid #2c3e3d;
@@ -449,11 +468,22 @@ html body #line_up {
 html body #line_up .line_up_heading {
   font-size: 2.4rem;
   font-weight: 700;
+  color: #a8b5a0;
+}
+@media (500px < width) {
+  html body #line_up .line_up_heading {
+    font-size: 3.2rem;
+  }
 }
 html body #line_up .line_up_lead {
   font-size: 2.4rem;
   font-weight: 500;
   text-align: center;
+}
+@media (500px < width) {
+  html body #line_up .line_up_lead {
+    font-size: 3.2rem;
+  }
 }
 html body #line_up .line_up_text {
   font-size: 1.6rem;
@@ -461,7 +491,16 @@ html body #line_up .line_up_text {
   line-height: 2;
   text-align: center;
 }
+@media (500px < width) {
+  html body #line_up .line_up_text {
+    font-size: 2rem;
+  }
+}
 html body #product_card {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
   display: flex;
   flex-direction: column;
   background-color: #f5f1ed;
@@ -469,7 +508,7 @@ html body #product_card {
 }
 html body #product_card #productImg {
   width: auto;
-  max-height: 455px;
+  align-self: center;
 }
 html body #product_card #productImg #productImg img {
   width: 100%;
@@ -484,12 +523,23 @@ html body #product_card .product-details span:nth-child(1) {
   font-size: 1.4rem;
   color: #6b7c7a;
   line-height: 1;
+  font-size: 1.6rem;
 }
 html body #product_card .product-details span:nth-child(2) {
   font-size: 2rem;
 }
+@media (500px < width) {
+  html body #product_card .product-details span:nth-child(2) {
+    font-size: 2.4rem;
+  }
+}
 html body #product_card .product-details span:nth-child(3) {
   font-size: 1.6rem;
+}
+@media (500px < width) {
+  html body #product_card .product-details span:nth-child(3) {
+    font-size: 2rem;
+  }
 }
 html body #product_card .product_prices {
   display: flex;
@@ -497,14 +547,32 @@ html body #product_card .product_prices {
   gap: 8px;
   margin-block-start: 2.4rem;
 }
+@media (500px < width) {
+  html body #product_card .product_prices {
+    flex-direction: row;
+    align-items: end;
+    gap: 6rem;
+  }
+}
 html body #product_card .product_prices .regular_price {
   font-size: 1.6rem;
   color: #6b7c7a;
   line-height: 1;
 }
+@media (500px < width) {
+  html body #product_card .product_prices .regular_price {
+    display: flex;
+    flex-direction: column;
+  }
+}
 html body #product_card .product_prices .regular_price .old {
   position: relative;
   display: inline-block;
+}
+@media (500px < width) {
+  html body #product_card .product_prices .regular_price .old {
+    font-size: 3.2rem;
+  }
 }
 html body #product_card .product_prices .regular_price .old::after {
   content: "";
@@ -521,10 +589,20 @@ html body #product_card .product_prices .special_price {
   color: #2c3e3d;
   line-height: 1;
 }
+@media (500px < width) {
+  html body #product_card .product_prices .special_price {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+  }
+}
 html body #product_card .product_prices .special_price .new {
   font-size: 3.6rem;
+  font-size: 5.4rem;
 }
 html body #product_text {
+  margin: 0 auto;
+  max-width: 600px;
   background-color: #f5f1ed;
   display: flex;
   flex-direction: column;
@@ -537,10 +615,24 @@ html body #product_text h2 {
   font-weight: 500;
   line-height: 1.5;
 }
+@media (500px < width) {
+  html body #product_text h2 {
+    font-size: 2.4rem;
+  }
+}
 html body #product_text p {
   font-size: 1.6rem;
+  line-height: 2;
+  font-weight: 400;
+}
+@media (500px < width) {
+  html body #product_text p {
+    font-size: 2rem;
+  }
 }
 html body #ingredients {
+  margin: 0 auto;
+  max-width: 600px;
   background-color: #f5f1ed;
   padding-inline: 3rem;
   padding-block-end: 6rem;
@@ -550,6 +642,7 @@ html body #ingredients h3 {
   font-size: 2rem;
   line-height: 1;
   font-weight: 400;
+  padding-block-end: 3rem;
 }
 html body #ingredients .ingredient_list {
   display: flex;
@@ -562,24 +655,45 @@ html body #ingredients .ingredients_item {
   gap: 3rem;
   padding-block-end: 3rem;
 }
-html body #ingredients .ingredients_text {
+html body #ingredients .ingredients_item .ingredients_img {
+  max-width: 200;
+  height: auto;
+}
+html body #ingredients .ingredients_item .ingredients_img .ingredients_img img {
+  width: auto;
+  height: auto;
+}
+html body #ingredients .ingredients_item .ingredients_text {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #ingredients .ingredients_text h4 {
+html body #ingredients .ingredients_item .ingredients_text h4 {
   font-size: 1.6rem;
   color: #2c3e3d;
   font-weight: 400;
   line-height: 1;
 }
-html body #ingredients .ingredients_text p {
+@media (500px < width) {
+  html body #ingredients .ingredients_item .ingredients_text h4 {
+    font-size: 2rem;
+  }
+}
+html body #ingredients .ingredients_item .ingredients_text p {
   font-size: 1.4rem;
   color: #6b7c7a;
   line-height: 1.5;
 }
+@media (500px < width) {
+  html body #ingredients .ingredients_item .ingredients_text p {
+    font-size: 2rem;
+  }
+}
 html body #reviews {
+  margin: 0 auto;
+  max-width: 600px;
   background-image: url(../images/review_bg.png);
+  background-size: cover;
   padding: 3rem;
 }
 html body #reviews .review_title {
@@ -656,6 +770,8 @@ html body #reviews .reviews_card .review_text {
   line-height: 1.5;
 }
 html body #reasons {
+  margin: 0 auto;
+  max-width: 600px;
   background-color: #f5f1ed;
   padding: 6rem 3rem;
 }
@@ -717,4 +833,134 @@ html body #reasons .points .pointText h4 {
 html body #reasons .points .pointText .point_details {
   font-size: 1.4rem;
   line-height: 1.5;
+}
+html body #reasons .accordion {
+  list-style: none;
+  border-bottom: 1px solid #6b7c7a;
+}
+html body #reasons .accordion li {
+  font-size: 1.4rem;
+  color: #2c3e3d;
+}
+html body #reasons .accordion-q button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-block: 3rem;
+  padding-inline: 1.6rem;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  color: #2c3e3d;
+}
+html body #reasons .accordion-q-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+}
+html body #reasons .accordion-q-icon::before,
+html body #reasons .accordion-q-icon::after {
+  content: "";
+  position: absolute;
+  background: #6b7c7a;
+  transition: transform 0.3s;
+}
+html body #reasons .accordion-q-icon::before {
+  top: 6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+html body #reasons .accordion-q-icon::after {
+  top: 0;
+  left: 6px;
+  width: 2px;
+  height: 100%;
+}
+html body #reasons li.is-open .accordion-q-icon::after {
+  transform: rotate(90deg);
+}
+html body #reasons .accordion-a {
+  display: none;
+  overflow: hidden;
+}
+html body #reasons .accordion-a-inner {
+  padding-block-end: 3rem;
+  padding-inline: 1.6rem;
+}
+html body #reasons .accordion-a-inner ol {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.8;
+  font-size: 15px;
+}
+html body #brand {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: #e8ddd3;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+html body #brand .loop {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  padding-block-start: 60px;
+}
+html body #brand .loop_text {
+  font-size: 6.4rem;
+  font-weight: 800;
+  font-family: "Bodoni Moda", serif;
+  display: inline-block;
+  padding-right: 50px;
+  animation: loop 40s linear infinite;
+  color: #1a1a1a;
+  line-height: 1;
+}
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+html body #brand .brand_message {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #2c3e3d;
+  padding-inline: 3rem;
+}
+html body #brand .brandImg {
+  align-self: center;
+}
+html body #brand .sns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+html body #brand .sns p {
+  font-size: 1.4rem;
+}
+html body #brand .sns .sns_icons {
+  display: flex;
+  gap: 6rem;
+}
+html body .footer {
+  margin: 0 auto;
+  max-width: 600px;
+  background-color: #e8ddd3;
+  padding-block-start: 77px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html body .footer small {
+  padding-block-end: 1.6rem;
 }/*# sourceMappingURL=style.css.map */

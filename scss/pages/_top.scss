@@ -2,15 +2,18 @@
 @use '../common/index' as *;
 // globalディレクトリにはCSS変数とミックスインが入っているので、それを呼び出し
 // asによる名前空間指定でアスタリスク(*)を使うと、index、の記述が省略できます。
+
+@media (500px < width) {
+}
 html {
-  // font-feature-settings: 'palt';
+  font-feature-settings: 'palt';
   font-size: 62.5%;
   img {
     max-width: 100%;
     height: auto;
   }
   body {
-    max-width: 390px;
+    // max-width: 390px;
     margin: 0 auto;
     font-family: $mainTextFont;
     // 固定ボタン
@@ -64,7 +67,7 @@ html {
       }
       .title {
         font-size: 4.8rem;
-        font-weight: 700;
+        font-weight: $bold;
         color: $whiteTextColor;
         text-align: center;
         padding-top: 34px;
@@ -84,11 +87,15 @@ html {
       .topText {
         display: block;
         font-size: 1.6rem;
-        font-weight: 500;
+        font-weight: $regular;
+        line-height: 1.2;
         margin-top: 1.6rem;
         color: $whiteTextColor;
         font-feature-settings: 'palt';
         text-align: center;
+        @media (500px < width) {
+          font-size: 2.4rem;
+        }
       }
     }
 
@@ -125,9 +132,15 @@ html {
           align-items: center;
 
           .secTitle {
-            @include secTitle;
+            font-size: 2.4rem;
+            font-weight: $medium;
+            line-height: 1;
+            color: $titleColor;
             text-align: center;
             margin-bottom: 24px;
+            @media (500px < width) {
+              font-size: 3.2rem;
+            }
           }
 
           #conceptText,
@@ -135,6 +148,9 @@ html {
             font-size: 1.6rem;
             line-height: 2;
             color: $textColor;
+            @media (500px < width) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -175,8 +191,11 @@ html {
 
     // セクション02　skincare lineup
     #line_up {
+      margin: 0 auto;
+      max-width: 600px;
       display: flex;
       flex-direction: column;
+      align-self: center;
       align-items: center;
       padding-block: 6rem;
       border-bottom: 1px solid $textColor;
@@ -186,22 +205,37 @@ html {
       .line_up_heading {
         font-size: 2.4rem;
         font-weight: $bold;
+        color: $babygreen;
+        @media (500px < width) {
+          font-size: 3.2rem;
+        }
       }
       .line_up_lead {
         font-size: 2.4rem;
         font-weight: $medium;
         text-align: center;
+        @media (500px < width) {
+          font-size: 3.2rem;
+        }
       }
       .line_up_text {
         font-size: 1.6rem;
         font-weight: $regular;
         line-height: 2;
         text-align: center;
+        @media (500px < width) {
+          font-size: 2rem;
+        }
       }
     }
 
     // <!-- セクション03 商品紹介 -->
     #product_card {
+      margin: 0 auto;
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+
       display: flex;
       flex-direction: column;
       background-color: $mainbg02;
@@ -209,7 +243,7 @@ html {
 
       #productImg {
         width: auto;
-        max-height: 455px;
+        align-self: center;
 
         #productImg img {
           width: 100%;
@@ -225,14 +259,23 @@ html {
           font-size: 1.4rem;
           color: $subTextColor;
           line-height: 1;
+          @media (500px < width) {
+          }
+          font-size: 1.6rem;
         }
 
         span:nth-child(2) {
           font-size: 2rem;
+          @media (500px < width) {
+            font-size: 2.4rem;
+          }
         }
 
         span:nth-child(3) {
           font-size: 1.6rem;
+          @media (500px < width) {
+            font-size: 2rem;
+          }
         }
       }
       .product_prices {
@@ -240,13 +283,27 @@ html {
         flex-direction: column;
         gap: 8px;
         margin-block-start: 2.4rem;
+        @media (500px < width) {
+          flex-direction: row;
+          align-items: end;
+          gap: 6rem;
+        }
+
         .regular_price {
           font-size: 1.6rem;
           color: $subTextColor;
           line-height: 1;
+          @media (500px < width) {
+            display: flex;
+            flex-direction: column;
+          }
+
           .old {
             position: relative;
             display: inline-block;
+            @media (500px < width) {
+              font-size: 3.2rem;
+            }
           }
 
           .old::after {
@@ -265,8 +322,16 @@ html {
           color: $textColor;
           line-height: 1;
 
+          @media (500px < width) {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.6rem;
+          }
           .new {
             font-size: 3.6rem;
+            @media (500px < width) {
+            }
+            font-size: 5.4rem;
           }
         }
       }
@@ -274,6 +339,8 @@ html {
 
     // <!-- セクション04 商品説明 -->
     #product_text {
+      margin: 0 auto;
+      max-width: 600px;
       background-color: $mainbg02;
       display: flex;
       flex-direction: column;
@@ -284,14 +351,24 @@ html {
         font-size: 2rem;
         font-weight: $medium;
         line-height: 1.5;
+        @media (500px < width) {
+          font-size: 2.4rem;
+        }
       }
       p {
         font-size: 1.6rem;
+        line-height: 2;
+        font-weight: $regular;
+        @media (500px < width) {
+          font-size: 2rem;
+        }
       }
     }
 
     // <!-- セクション05 特徴成分 -->
     #ingredients {
+      margin: 0 auto;
+      max-width: 600px;
       background-color: $mainbg02;
       padding-inline: 3rem;
       padding-block-end: 6rem;
@@ -300,6 +377,7 @@ html {
         font-size: 2rem;
         line-height: 1;
         font-weight: $regular;
+        padding-block-end: 3rem;
       }
       .ingredient_list {
         display: flex;
@@ -311,28 +389,46 @@ html {
         display: flex;
         gap: 3rem;
         padding-block-end: 3rem;
-      }
-      .ingredients_text {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        h4 {
-          font-size: 1.6rem;
-          color: $textColor;
-          font-weight: $regular;
-          line-height: 1;
+        .ingredients_img {
+          max-width: 200;
+          height: auto;
+          .ingredients_img img {
+            width: auto;
+            height: auto;
+          }
         }
-        p {
-          font-size: 1.4rem;
-          color: $subTextColor;
-          line-height: 1.5;
+        .ingredients_text {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          h4 {
+            font-size: 1.6rem;
+            color: $textColor;
+            font-weight: $regular;
+            line-height: 1;
+            @media (500px < width) {
+              font-size: 2rem;
+            }
+          }
+          p {
+            font-size: 1.4rem;
+            color: $subTextColor;
+            line-height: 1.5;
+            @media (500px < width) {
+              font-size: 2rem;
+            }
+          }
         }
       }
     }
 
     // <!-- セクション06 口コミ -->
     #reviews {
+      margin: 0 auto;
+      max-width: 600px;
+
       background-image: url(../images/review_bg.png);
+      background-size: cover;
       padding: 3rem;
 
       .review_title {
@@ -410,8 +506,11 @@ html {
       }
     }
 
-    // <!-- セクション07 選ばれる理由 -->
+    // <!-- セクション07 選ばれる理由 アコーディオンメニュー -->
     #reasons {
+      margin: 0 auto;
+      max-width: 600px;
+
       background-color: $mainbg02;
       padding: 6rem 3rem;
       .secTitle {
@@ -472,6 +571,162 @@ html {
             line-height: 1.5;
           }
         }
+      }
+
+      // アコーディオンメニュー
+      .accordion {
+        list-style: none;
+        // border-top: 1px solid #ccc;
+        border-bottom: 1px solid $subTextColor;
+
+        li {
+          // border-bottom: 1px solid $star;
+          font-size: 1.4rem;
+          color: $textColor;
+        }
+      }
+
+      .accordion-q button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-block: 3rem;
+        padding-inline: 1.6rem;
+        border: none;
+        background: none;
+        font-size: 1.6rem;
+        cursor: pointer;
+        position: relative;
+        color: $textColor;
+      }
+
+      .accordion-q-icon {
+        position: relative;
+        width: 14px;
+        height: 14px;
+      }
+
+      .accordion-q-icon::before,
+      .accordion-q-icon::after {
+        content: '';
+        position: absolute;
+        background: $subTextColor;
+        transition: transform 0.3s;
+      }
+
+      .accordion-q-icon::before {
+        top: 6px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+      }
+
+      .accordion-q-icon::after {
+        top: 0;
+        left: 6px;
+        width: 2px;
+        height: 100%;
+      }
+
+      li.is-open .accordion-q-icon::after {
+        transform: rotate(90deg);
+      }
+
+      .accordion-a {
+        display: none;
+        overflow: hidden;
+      }
+
+      .accordion-a-inner {
+        padding-block-end: 3rem;
+        padding-inline: 1.6rem;
+
+        ol {
+          margin: 0;
+          padding-left: 1.2rem;
+          line-height: 1.8;
+          font-size: 15px;
+        }
+      }
+    }
+
+    // <!-- セクション08 ブランド紹介 -->
+    #brand {
+      margin: 0 auto;
+      max-width: 600px;
+
+      background-color: $mainbg;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      // loopテキスト
+      .loop {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        width: 100%;
+        padding-block-start: 60px;
+      }
+
+      .loop_text {
+        font-size: 6.4rem;
+        font-weight: 800;
+        font-family: $logoFont;
+        display: inline-block;
+        padding-right: 50px;
+        animation: loop 40s linear infinite;
+        color: $titleColor;
+        line-height: 1;
+      }
+
+      @keyframes loop {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .brand_message {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: $textColor;
+        padding-inline: 3rem;
+      }
+      .brandImg {
+        align-self: center;
+      }
+      .sns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // padding-block-start: 3rem;
+        gap: 1.6rem;
+        p {
+          font-size: 1.4rem;
+        }
+        .sns_icons {
+          display: flex;
+          gap: 6rem;
+        }
+      }
+    }
+
+    // <!-- コピーライトを入れる -->
+    .footer {
+      margin: 0 auto;
+      max-width: 600px;
+
+      background-color: $mainbg;
+      padding-block-start: 77px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      small {
+        padding-block-end: 1.6rem;
       }
     }
   }
