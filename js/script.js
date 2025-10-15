@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Lenis初期化
+  const lenis = new Lenis();
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
   // Rellax初期化
   if (
     typeof Rellax !== 'undefined' &&

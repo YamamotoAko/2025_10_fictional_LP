@@ -426,9 +426,14 @@ html body #product_concept .concept_wraper #conceptText p {
 html body #product_concept .imgContainer {
   position: relative;
   max-width: 600px;
-  height: 900px;
+  height: 920px;
   overflow: hidden;
   margin-block-start: 6rem;
+}
+@media (500px > width) {
+  html body #product_concept .imgContainer {
+    height: 750px;
+  }
 }
 html body #product_concept .imgContainer #ani_item,
 html body #product_concept .imgContainer #ani_cica,
@@ -437,8 +442,10 @@ html body #product_concept .imgContainer #ani_tangerine {
   position: absolute;
 }
 html body #product_concept .imgContainer #ani_item {
-  width: 300px;
-  top: -10%;
+  width: 50vw;
+  max-width: 300px;
+  min-width: 220px;
+  top: -3%;
   left: 15%;
   z-index: 1;
 }
@@ -447,30 +454,59 @@ html body #product_concept .imgContainer #ani_item img {
   height: auto;
 }
 html body #product_concept .imgContainer #ani_cica {
-  width: 300px;
-  top: 18%;
+  width: 50vw;
+  max-width: 300px;
+  min-width: 220px;
+  top: 23%;
   left: 70%;
   z-index: 3;
+}
+@media (450px > width) {
+  html body #product_concept .imgContainer #ani_cica {
+    left: 78%;
+    top: 26%;
+  }
 }
 html body #product_concept .imgContainer #ani_cica img {
   width: 100%;
   height: auto;
 }
 html body #product_concept .imgContainer #ani_sea {
-  width: 350px;
-  top: 50%;
+  width: 58vw;
+  max-width: 350px;
+  min-width: 250px;
+  top: 48%;
   left: -20%;
   z-index: 3;
+}
+@media (550px > width) {
+  html body #product_concept .imgContainer #ani_sea {
+    left: -25%;
+    top: 43%;
+  }
+}
+@media (500px > width) {
+  html body #product_concept .imgContainer #ani_sea {
+    left: -30%;
+    top: 45%;
+  }
 }
 html body #product_concept .imgContainer #ani_sea img {
   width: 100%;
   height: auto;
 }
 html body #product_concept .imgContainer #ani_tangerine {
-  width: 300px;
-  top: 50%;
+  width: 50vw;
+  max-width: 300px;
+  min-width: 150px;
+  top: 56%;
   left: 28%;
   z-index: 2;
+}
+@media (550px > width) {
+  html body #product_concept .imgContainer #ani_tangerine {
+    top: 55%;
+  }
 }
 html body #product_concept .imgContainer #ani_tangerine img {
   width: 100%;

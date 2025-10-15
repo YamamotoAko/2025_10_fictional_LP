@@ -159,9 +159,12 @@ html {
       .imgContainer {
         position: relative;
         max-width: 600px;
-        height: 900px;
+        height: 920px;
         overflow: hidden;
         margin-block-start: 6rem;
+        @media (500px > width) {
+          height: 750px;
+        }
 
         #ani_item,
         #ani_cica,
@@ -171,40 +174,65 @@ html {
         }
 
         #ani_item {
-          width: 300px;
-          top: -10%;
+          width: 50vw;
+          max-width: 300px;
+          min-width: 220px;
+          top: -3%;
           left: 15%;
           z-index: 1;
+
           img {
             width: 100%;
             height: auto;
           }
         }
         #ani_cica {
-          width: 300px;
-          top: 18%;
+          width: 50vw;
+          max-width: 300px;
+          min-width: 220px;
+          top: 23%;
           left: 70%;
           z-index: 3;
+          @media (450px > width) {
+            left: 78%;
+            top: 26%;
+          }
           img {
             width: 100%;
             height: auto;
           }
         }
         #ani_sea {
-          width: 350px;
-          top: 50%;
+          width: 58vw;
+          max-width: 350px;
+          min-width: 250px;
+          top: 48%;
           left: -20%;
           z-index: 3;
+          @media (550px > width) {
+            left: -25%;
+            top: 43%;
+          }
+          @media (500px > width) {
+            left: -30%;
+            top: 45%;
+          }
+
           img {
             width: 100%;
             height: auto;
           }
         }
         #ani_tangerine {
-          width: 300px;
-          top: 50%;
+          width: 50vw;
+          max-width: 300px;
+          min-width: 150px;
+          top: 56%;
           left: 28%;
           z-index: 2;
+          @media (550px > width) {
+            top: 55%;
+          }
           img {
             width: 100%;
             height: auto;
