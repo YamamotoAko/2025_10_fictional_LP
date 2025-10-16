@@ -29,14 +29,26 @@ html {
         rgba(168, 205, 219, 0.7) 5%,
         rgba(168, 181, 160, 0.7) 88%
       );
-      .fixTitle {
+      .left {
         position: fixed;
-        z-index: -50;
         top: 45%;
-        left: 3%;
-        font-size: 5vw;
-        color: rgba(255, 255, 255, 0.4);
-        font-family: $logoFont;
+        z-index: -50;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline-start: 5rem;
+        .fixTitle {
+          font-size: 5vw;
+          color: rgba(255, 255, 255, 0.4);
+          font-family: $logoFont;
+        }
+        nav {
+          li {
+            list-style: none;
+            font-size: 2.4rem;
+            color: rgba(255, 255, 255, 0.4);
+          }
+        }
       }
       // .sns {
       //   position: fixed;

@@ -300,14 +300,24 @@ html body #fixUI {
   z-index: -100;
   background-image: linear-gradient(150deg, rgba(168, 205, 219, 0.7) 5%, rgba(168, 181, 160, 0.7) 88%);
 }
-html body #fixUI .fixTitle {
+html body #fixUI .left {
   position: fixed;
-  z-index: -50;
   top: 45%;
-  left: 3%;
+  z-index: -50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline-start: 5rem;
+}
+html body #fixUI .left .fixTitle {
   font-size: 5vw;
   color: rgba(255, 255, 255, 0.4);
   font-family: "Bodoni Moda", serif;
+}
+html body #fixUI .left nav li {
+  list-style: none;
+  font-size: 2.4rem;
+  color: rgba(255, 255, 255, 0.4);
 }
 html body #purchase {
   position: fixed;
