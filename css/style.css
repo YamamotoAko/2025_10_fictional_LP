@@ -290,17 +290,35 @@ html img {
 html body {
   margin: 0 auto;
   font-family: "Noto Sans JP", sans-serif;
-  background-color: #454f56;
+}
+html body #fixUI {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  background-image: linear-gradient(150deg, rgba(168, 205, 219, 0.7) 5%, rgba(168, 181, 160, 0.7) 88%);
+}
+html body #fixUI .fixTitle {
+  position: fixed;
+  z-index: -50;
+  top: 45%;
+  left: 3%;
+  font-size: 5vw;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "Bodoni Moda", serif;
 }
 html body #purchase {
   position: fixed;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 100;
   width: 330px;
   height: 61px;
   display: flex;
+  align-items: flex-end;
   border-radius: 5rem;
   justify-content: space-between;
   align-items: center;
@@ -312,11 +330,19 @@ html body #purchase {
   font-size: 1.6rem;
   color: #fff;
 }
+@media (500px < width) {
+  html body #purchase {
+    font-size: 2rem;
+  }
+}
 html body #purchase .off {
   font-size: 2.4rem;
+  font-size: 3rem;
 }
 html body #purchase .arrow {
   font-size: 2.4rem;
+  font-size: 3rem;
+  align-self: center;
 }
 html body #purchase:hover {
   background-position: right;
@@ -1118,6 +1144,32 @@ html body #brand .brandImg {
   align-self: center;
   margin-inline: 3rem;
 }
+html body #brand #toTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fdfbf8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+html body #brand #toTop::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-left: 3px solid #e8ddd3;
+  border-top: 3px solid #e8ddd3;
+  transform: rotate(45deg);
+  margin-bottom: 3px;
+}
+html body #brand #toTop:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
 html body #brand .sns {
   display: flex;
   flex-direction: column;
@@ -1136,18 +1188,18 @@ html body #brand .sns .sns_icons {
   display: flex;
   gap: 6rem;
 }
-html body #brand .sns .sns_icons #x {
+html body #brand .sns .sns_icons .x {
   max-width: 30px;
 }
-html body #brand .sns .sns_icons #x img {
+html body #brand .sns .sns_icons .x img {
   width: 100%;
   height: auto;
   display: block;
 }
-html body #brand .sns .sns_icons #instagram {
+html body #brand .sns .sns_icons .instagram {
   max-width: 32px;
 }
-html body #brand .sns .sns_icons #instagram img {
+html body #brand .sns .sns_icons .instagram img {
   width: 100%;
   height: auto;
   display: block;

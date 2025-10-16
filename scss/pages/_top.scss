@@ -16,18 +16,73 @@ html {
     // max-width: 390px;
     margin: 0 auto;
     font-family: $mainTextFont;
-    background-color: #454f56;
+
+    #fixUI {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -100;
+      background-image: linear-gradient(
+        150deg,
+        rgba(168, 205, 219, 0.7) 5%,
+        rgba(168, 181, 160, 0.7) 88%
+      );
+      .fixTitle {
+        position: fixed;
+        z-index: -50;
+        top: 45%;
+        left: 3%;
+        font-size: 5vw;
+        color: rgba(255, 255, 255, 0.4);
+        font-family: $logoFont;
+      }
+      // .sns {
+      //   position: fixed;
+      //   z-index: -50;
+      //   top: 45%;
+      //   right: 10%;
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+      //   gap: 5rem;
+      //   p {
+      //     color: $textColor;
+      //     font-size: 1.5vw;
+      //   }
+      //   .sns_icons {
+      //     display: flex;
+      //     gap: 10rem;
+      //     .x {
+      //       width: 80px;
+      //       img {
+      //         width: 100%;
+      //         height: auto;
+      //       }
+      //     }
+      //     .instagram {
+      //       width: 80px;
+      //       img {
+      //         width: 100%;
+      //         height: auto;
+      //       }
+      //     }
+      //   }
+      // }
+    }
     // 固定ボタン
     #purchase {
       position: fixed;
       bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 10;
+      z-index: 100;
 
       width: 330px;
       height: 61px;
       display: flex;
+      align-items: flex-end;
       border-radius: 5rem;
       justify-content: space-between;
       align-items: center;
@@ -38,12 +93,19 @@ html {
       transition: background-position 0.3s ease-in-out;
       font-size: 1.6rem;
       color: $whiteTextColor;
+      @media (500px < width) {
+        font-size: 2rem;
+      }
+
       .off {
         font-size: 2.4rem;
+        font-size: 3rem;
       }
 
       .arrow {
         font-size: 2.4rem;
+        font-size: 3rem;
+        align-self: center;
       }
     }
     #purchase:hover {
@@ -836,6 +898,36 @@ html {
         align-self: center;
         margin-inline: 3rem;
       }
+      #toTop {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $review;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        // 中の矢印（::beforeで描く）
+        &::before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          border-left: 3px solid $mainbg; // 薄いベージュ
+          border-top: 3px solid $mainbg;
+          transform: rotate(45deg); // 斜め上向きに
+          margin-bottom: 3px;
+        }
+
+        &:hover {
+          transform: translateY(-4px);
+          opacity: 0.8;
+        }
+      }
+
       .sns {
         display: flex;
         flex-direction: column;
@@ -851,7 +943,7 @@ html {
         .sns_icons {
           display: flex;
           gap: 6rem;
-          #x {
+          .x {
             max-width: 30px;
             img {
               width: 100%;
@@ -859,7 +951,7 @@ html {
               display: block;
             }
           }
-          #instagram {
+          .instagram {
             max-width: 32px;
             img {
               width: 100%;
