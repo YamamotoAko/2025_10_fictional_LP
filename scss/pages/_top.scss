@@ -29,59 +29,37 @@ html {
         rgba(168, 205, 219, 0.7) 5%,
         rgba(168, 181, 160, 0.7) 88%
       );
-      .left {
-        position: fixed;
-        top: 45%;
-        z-index: -50;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-inline-start: 5rem;
+      pointer-events: none;
         .fixTitle {
+          position: fixed;
+          top: 45%;
+          left: 3%;
+          z-index: -50;
           font-size: 5vw;
           color: rgba(255, 255, 255, 0.4);
           font-family: $logoFont;
         }
         nav {
+          position: fixed;
+          top: 45%;
+          right: 3%;
+
+
+          display: flex;
+          flex-direction: column;
+          gap: 1.6rem;
+          pointer-events: auto;
           li {
             list-style: none;
             font-size: 2.4rem;
             color: rgba(255, 255, 255, 0.4);
+            a{
+              font-size: 3rem;
+              text-decoration: none;
+            }
           }
         }
       }
-      // .sns {
-      //   position: fixed;
-      //   z-index: -50;
-      //   top: 45%;
-      //   right: 10%;
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      //   gap: 5rem;
-      //   p {
-      //     color: $textColor;
-      //     font-size: 1.5vw;
-      //   }
-      //   .sns_icons {
-      //     display: flex;
-      //     gap: 10rem;
-      //     .x {
-      //       width: 80px;
-      //       img {
-      //         width: 100%;
-      //         height: auto;
-      //       }
-      //     }
-      //     .instagram {
-      //       width: 80px;
-      //       img {
-      //         width: 100%;
-      //         height: auto;
-      //       }
-      //     }
-      //   }
-      // }
     }
     // 固定ボタン
     #purchase {
@@ -990,4 +968,4 @@ html {
       }
     }
   }
-}
+

@@ -299,27 +299,36 @@ html body #fixUI {
   height: 100vh;
   z-index: -100;
   background-image: linear-gradient(150deg, rgba(168, 205, 219, 0.7) 5%, rgba(168, 181, 160, 0.7) 88%);
+  pointer-events: none;
 }
-html body #fixUI .left {
+html body #fixUI .fixTitle {
   position: fixed;
   top: 45%;
+  left: 3%;
   z-index: -50;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-inline-start: 5rem;
-}
-html body #fixUI .left .fixTitle {
   font-size: 5vw;
   color: rgba(255, 255, 255, 0.4);
   font-family: "Bodoni Moda", serif;
 }
-html body #fixUI .left nav li {
+html body #fixUI nav {
+  position: fixed;
+  top: 45%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  pointer-events: auto;
+}
+html body #fixUI nav li {
   list-style: none;
   font-size: 2.4rem;
   color: rgba(255, 255, 255, 0.4);
 }
-html body #purchase {
+html body #fixUI nav li a {
+  font-size: 3rem;
+  text-decoration: none;
+}
+html #purchase {
   position: fixed;
   bottom: 40px;
   left: 50%;
@@ -341,23 +350,23 @@ html body #purchase {
   color: #fff;
 }
 @media (500px < width) {
-  html body #purchase {
+  html #purchase {
     font-size: 2rem;
   }
 }
-html body #purchase .off {
+html #purchase .off {
   font-size: 2.4rem;
   font-size: 3rem;
 }
-html body #purchase .arrow {
+html #purchase .arrow {
   font-size: 2.4rem;
   font-size: 3rem;
   align-self: center;
 }
-html body #purchase:hover {
+html #purchase:hover {
   background-position: right;
 }
-html body #top {
+html #top {
   margin: 0 auto;
   padding: 3rem;
   max-width: 600px;
@@ -370,26 +379,26 @@ html body #top {
   flex-direction: column;
   align-items: center;
 }
-html body #top .logo {
+html #top .logo {
   align-self: flex-end;
 }
-html body #top .title {
+html #top .title {
   font-size: 4.8rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
   padding-top: 34px;
 }
-html body #top .title span {
+html #top .title span {
   display: block;
   line-height: 1;
   margin-bottom: 0.2em;
 }
-html body #top .title span:nth-child(2),
-html body #top .title :last-child {
+html #top .title span:nth-child(2),
+html #top .title :last-child {
   margin-bottom: 0;
 }
-html body #top .topText {
+html #top .topText {
   display: block;
   font-size: 1.6rem;
   font-weight: 400;
@@ -400,24 +409,24 @@ html body #top .topText {
   text-align: center;
 }
 @media (500px < width) {
-  html body #top .topText {
+  html #top .topText {
     font-size: 2.4rem;
   }
 }
-html body #product_concept {
+html #product_concept {
   max-width: 600px;
   background-color: #e8ddd3;
   margin: 0 auto;
   padding-block: 6rem;
 }
-html body #product_concept .concept_wraper {
+html #product_concept .concept_wraper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   isolation: isolate;
 }
-html body #product_concept .concept_wraper .circle-bg {
+html #product_concept .concept_wraper .circle-bg {
   position: absolute;
   width: 330px;
   height: 300px;
@@ -426,7 +435,7 @@ html body #product_concept .concept_wraper .circle-bg {
   filter: blur(50px);
   z-index: 0;
 }
-html body #product_concept .concept_wraper #conceptText {
+html #product_concept .concept_wraper #conceptText {
   position: relative;
   text-align: center;
   z-index: 1;
@@ -434,7 +443,7 @@ html body #product_concept .concept_wraper #conceptText {
   flex-direction: column;
   align-items: center;
 }
-html body #product_concept .concept_wraper #conceptText .secTitle {
+html #product_concept .concept_wraper #conceptText .secTitle {
   font-size: 2.4rem;
   font-weight: 500;
   line-height: 1;
@@ -443,23 +452,23 @@ html body #product_concept .concept_wraper #conceptText .secTitle {
   margin-bottom: 24px;
 }
 @media (500px < width) {
-  html body #product_concept .concept_wraper #conceptText .secTitle {
+  html #product_concept .concept_wraper #conceptText .secTitle {
     font-size: 3.2rem;
   }
 }
-html body #product_concept .concept_wraper #conceptText #conceptText,
-html body #product_concept .concept_wraper #conceptText p {
+html #product_concept .concept_wraper #conceptText #conceptText,
+html #product_concept .concept_wraper #conceptText p {
   font-size: 1.6rem;
   line-height: 2;
   color: #2c3e3d;
 }
 @media (500px < width) {
-  html body #product_concept .concept_wraper #conceptText #conceptText,
-  html body #product_concept .concept_wraper #conceptText p {
+  html #product_concept .concept_wraper #conceptText #conceptText,
+  html #product_concept .concept_wraper #conceptText p {
     font-size: 2rem;
   }
 }
-html body #product_concept .imgContainer {
+html #product_concept .imgContainer {
   position: relative;
   max-width: 600px;
   height: 920px;
@@ -467,17 +476,17 @@ html body #product_concept .imgContainer {
   margin-block-start: 6rem;
 }
 @media (500px > width) {
-  html body #product_concept .imgContainer {
+  html #product_concept .imgContainer {
     height: 750px;
   }
 }
-html body #product_concept .imgContainer #ani_item,
-html body #product_concept .imgContainer #ani_cica,
-html body #product_concept .imgContainer #ani_sea,
-html body #product_concept .imgContainer #ani_tangerine {
+html #product_concept .imgContainer #ani_item,
+html #product_concept .imgContainer #ani_cica,
+html #product_concept .imgContainer #ani_sea,
+html #product_concept .imgContainer #ani_tangerine {
   position: absolute;
 }
-html body #product_concept .imgContainer #ani_item {
+html #product_concept .imgContainer #ani_item {
   width: 50vw;
   max-width: 300px;
   min-width: 220px;
@@ -485,11 +494,11 @@ html body #product_concept .imgContainer #ani_item {
   left: 15%;
   z-index: 1;
 }
-html body #product_concept .imgContainer #ani_item img {
+html #product_concept .imgContainer #ani_item img {
   width: 100%;
   height: auto;
 }
-html body #product_concept .imgContainer #ani_cica {
+html #product_concept .imgContainer #ani_cica {
   width: 50vw;
   max-width: 300px;
   min-width: 220px;
@@ -498,16 +507,16 @@ html body #product_concept .imgContainer #ani_cica {
   z-index: 3;
 }
 @media (450px > width) {
-  html body #product_concept .imgContainer #ani_cica {
+  html #product_concept .imgContainer #ani_cica {
     left: 78%;
     top: 26%;
   }
 }
-html body #product_concept .imgContainer #ani_cica img {
+html #product_concept .imgContainer #ani_cica img {
   width: 100%;
   height: auto;
 }
-html body #product_concept .imgContainer #ani_sea {
+html #product_concept .imgContainer #ani_sea {
   width: 58vw;
   max-width: 350px;
   min-width: 250px;
@@ -516,22 +525,22 @@ html body #product_concept .imgContainer #ani_sea {
   z-index: 3;
 }
 @media (550px > width) {
-  html body #product_concept .imgContainer #ani_sea {
+  html #product_concept .imgContainer #ani_sea {
     left: -25%;
     top: 43%;
   }
 }
 @media (500px > width) {
-  html body #product_concept .imgContainer #ani_sea {
+  html #product_concept .imgContainer #ani_sea {
     left: -30%;
     top: 45%;
   }
 }
-html body #product_concept .imgContainer #ani_sea img {
+html #product_concept .imgContainer #ani_sea img {
   width: 100%;
   height: auto;
 }
-html body #product_concept .imgContainer #ani_tangerine {
+html #product_concept .imgContainer #ani_tangerine {
   width: 50vw;
   max-width: 300px;
   min-width: 150px;
@@ -540,15 +549,15 @@ html body #product_concept .imgContainer #ani_tangerine {
   z-index: 2;
 }
 @media (550px > width) {
-  html body #product_concept .imgContainer #ani_tangerine {
+  html #product_concept .imgContainer #ani_tangerine {
     top: 55%;
   }
 }
-html body #product_concept .imgContainer #ani_tangerine img {
+html #product_concept .imgContainer #ani_tangerine img {
   width: 100%;
   height: auto;
 }
-html body #line_up {
+html #line_up {
   margin: 0 auto;
   max-width: 600px;
   display: flex;
@@ -560,38 +569,38 @@ html body #line_up {
   gap: 3rem;
   background-color: #f5f1ed;
 }
-html body #line_up .line_up_heading {
+html #line_up .line_up_heading {
   font-size: 2.4rem;
   font-weight: 700;
   color: #a8b5a0;
 }
 @media (500px < width) {
-  html body #line_up .line_up_heading {
+  html #line_up .line_up_heading {
     font-size: 3.2rem;
   }
 }
-html body #line_up .line_up_lead {
+html #line_up .line_up_lead {
   font-size: 2.4rem;
   font-weight: 500;
   text-align: center;
 }
 @media (500px < width) {
-  html body #line_up .line_up_lead {
+  html #line_up .line_up_lead {
     font-size: 3.2rem;
   }
 }
-html body #line_up .line_up_text {
+html #line_up .line_up_text {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2;
   text-align: center;
 }
 @media (500px < width) {
-  html body #line_up .line_up_text {
+  html #line_up .line_up_text {
     font-size: 2rem;
   }
 }
-html body #product_card {
+html #product_card {
   margin: 0 auto;
   max-width: 600px;
   display: flex;
@@ -601,75 +610,75 @@ html body #product_card {
   background-color: #f5f1ed;
   padding: 6rem 3rem;
 }
-html body #product_card #productImg {
+html #product_card #productImg {
   width: auto;
   align-self: center;
 }
-html body #product_card #productImg #productImg img {
+html #product_card #productImg #productImg img {
   width: 100%;
   height: 100%;
 }
-html body #product_card .product-details {
+html #product_card .product-details {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
 }
-html body #product_card .product-details span:nth-child(1) {
+html #product_card .product-details span:nth-child(1) {
   font-size: 1.4rem;
   color: #6b7c7a;
   line-height: 1;
   font-size: 1.6rem;
 }
-html body #product_card .product-details span:nth-child(2) {
+html #product_card .product-details span:nth-child(2) {
   font-size: 2rem;
 }
 @media (500px < width) {
-  html body #product_card .product-details span:nth-child(2) {
+  html #product_card .product-details span:nth-child(2) {
     font-size: 2.4rem;
   }
 }
-html body #product_card .product-details span:nth-child(3) {
+html #product_card .product-details span:nth-child(3) {
   font-size: 1.6rem;
 }
 @media (500px < width) {
-  html body #product_card .product-details span:nth-child(3) {
+  html #product_card .product-details span:nth-child(3) {
     font-size: 2rem;
   }
 }
-html body #product_card .product_prices {
+html #product_card .product_prices {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-block-start: 2.4rem;
 }
 @media (500px < width) {
-  html body #product_card .product_prices {
+  html #product_card .product_prices {
     flex-direction: row;
     align-items: end;
     gap: 6rem;
   }
 }
-html body #product_card .product_prices .regular_price {
+html #product_card .product_prices .regular_price {
   font-size: 1.6rem;
   color: #6b7c7a;
   line-height: 1;
 }
 @media (500px < width) {
-  html body #product_card .product_prices .regular_price {
+  html #product_card .product_prices .regular_price {
     display: flex;
     flex-direction: column;
   }
 }
-html body #product_card .product_prices .regular_price .old {
+html #product_card .product_prices .regular_price .old {
   position: relative;
   display: inline-block;
 }
 @media (500px < width) {
-  html body #product_card .product_prices .regular_price .old {
+  html #product_card .product_prices .regular_price .old {
     font-size: 3.2rem;
   }
 }
-html body #product_card .product_prices .regular_price .old::after {
+html #product_card .product_prices .regular_price .old::after {
   content: "";
   position: absolute;
   left: -0.5em;
@@ -679,23 +688,23 @@ html body #product_card .product_prices .regular_price .old::after {
   background-color: #6b7c7a;
   transform: translateY(-50%);
 }
-html body #product_card .product_prices .special_price {
+html #product_card .product_prices .special_price {
   font-size: 1.6rem;
   color: #2c3e3d;
   line-height: 1;
 }
 @media (500px < width) {
-  html body #product_card .product_prices .special_price {
+  html #product_card .product_prices .special_price {
     display: flex;
     flex-direction: column;
     font-size: 1.6rem;
   }
 }
-html body #product_card .product_prices .special_price .new {
+html #product_card .product_prices .special_price .new {
   font-size: 3.6rem;
   font-size: 5.4rem;
 }
-html body #product_text {
+html #product_text {
   margin: 0 auto;
   max-width: 600px;
   background-color: #f5f1ed;
@@ -705,93 +714,93 @@ html body #product_text {
   padding-inline: 3rem;
   padding-block-end: 6rem;
 }
-html body #product_text h2 {
+html #product_text h2 {
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
 }
 @media (500px < width) {
-  html body #product_text h2 {
+  html #product_text h2 {
     font-size: 2.4rem;
   }
 }
-html body #product_text p {
+html #product_text p {
   font-size: 1.6rem;
   line-height: 2;
   font-weight: 400;
 }
 @media (500px < width) {
-  html body #product_text p {
+  html #product_text p {
     font-size: 2rem;
   }
 }
-html body #ingredients {
+html #ingredients {
   margin: 0 auto;
   max-width: 600px;
   background-color: #f5f1ed;
   padding-inline: 3rem;
   padding-block-end: 6rem;
 }
-html body #ingredients h3 {
+html #ingredients h3 {
   display: inline-block;
   font-size: 2rem;
   line-height: 1;
   font-weight: 400;
   padding-block-end: 3rem;
 }
-html body #ingredients .ingredient_list {
+html #ingredients .ingredient_list {
   display: flex;
   flex-direction: column;
   padding-block-end: 3rem;
   border-bottom: 1px solid #6b7c7a;
 }
-html body #ingredients .ingredients_item {
+html #ingredients .ingredients_item {
   display: flex;
   gap: 3rem;
   padding-block-end: 3rem;
 }
-html body #ingredients .ingredients_item .ingredients_img {
+html #ingredients .ingredients_item .ingredients_img {
   max-width: 200;
   height: auto;
 }
-html body #ingredients .ingredients_item .ingredients_img .ingredients_img img {
+html #ingredients .ingredients_item .ingredients_img .ingredients_img img {
   width: auto;
   height: auto;
 }
-html body #ingredients .ingredients_item .ingredients_text {
+html #ingredients .ingredients_item .ingredients_text {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #ingredients .ingredients_item .ingredients_text h4 {
+html #ingredients .ingredients_item .ingredients_text h4 {
   font-size: 1.6rem;
   color: #2c3e3d;
   font-weight: 400;
   line-height: 1;
 }
 @media (500px < width) {
-  html body #ingredients .ingredients_item .ingredients_text h4 {
+  html #ingredients .ingredients_item .ingredients_text h4 {
     font-size: 2rem;
   }
 }
-html body #ingredients .ingredients_item .ingredients_text p {
+html #ingredients .ingredients_item .ingredients_text p {
   font-size: 1.4rem;
   color: #6b7c7a;
   line-height: 1.5;
 }
 @media (500px < width) {
-  html body #ingredients .ingredients_item .ingredients_text p {
+  html #ingredients .ingredients_item .ingredients_text p {
     font-size: 2rem;
   }
 }
-html body #reviews {
+html #reviews {
   margin: 0 auto;
   max-width: 600px;
   background-image: url(../images/review_bg.png);
   background-size: cover;
   padding: 3rem;
 }
-html body #reviews .review_title {
+html #reviews .review_title {
   display: block;
   padding-block: 3rem;
   text-align: center;
@@ -800,11 +809,11 @@ html body #reviews .review_title {
   color: #1a1a1a;
 }
 @media (500px < width) {
-  html body #reviews .review_title {
+  html #reviews .review_title {
     font-size: 3.2rem;
   }
 }
-html body #reviews .reviews_card {
+html #reviews .reviews_card {
   background-color: #fdfbf8;
   padding: 2.4rem;
   display: flex;
@@ -813,12 +822,12 @@ html body #reviews .reviews_card {
   gap: 2rem;
   margin-block-end: 3rem;
 }
-html body #reviews .reviews_card .review_header {
+html #reviews .reviews_card .review_header {
   display: flex;
   gap: 3rem;
   align-items: center;
 }
-html body #reviews .reviews_card .review_header .avatar {
+html #reviews .reviews_card .review_header .avatar {
   background-color: #c9ae9e;
   width: 8rem;
   height: 8rem;
@@ -830,209 +839,209 @@ html body #reviews .reviews_card .review_header .avatar {
   font-size: 2.4rem;
   color: #fdfbf8;
 }
-html body #reviews .reviews_card .review_header .user {
+html #reviews .reviews_card .review_header .user {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-html body #reviews .reviews_card .review_header .user .userName {
+html #reviews .reviews_card .review_header .user .userName {
   font-size: 1.6rem;
   font-weight: 500;
   color: #2c3e3d;
   line-height: 1;
 }
 @media (500px < width) {
-  html body #reviews .reviews_card .review_header .user .userName {
+  html #reviews .reviews_card .review_header .user .userName {
     font-size: 2.4rem;
   }
 }
-html body #reviews .reviews_card .review_header .user .userMeta {
+html #reviews .reviews_card .review_header .user .userMeta {
   font-size: 1.4rem;
   color: #2c3e3d;
   line-height: 1;
 }
 @media (500px < width) {
-  html body #reviews .reviews_card .review_header .user .userMeta {
+  html #reviews .reviews_card .review_header .user .userMeta {
     font-size: 1.6rem;
   }
 }
-html body #reviews .reviews_card .rating {
+html #reviews .reviews_card .rating {
   display: flex;
   gap: 1.6rem;
   align-items: center;
   justify-content: center;
   line-height: 1;
 }
-html body #reviews .reviews_card .rating .stars {
+html #reviews .reviews_card .rating .stars {
   font-size: 2rem;
   color: #ffea00;
 }
 @media (500px < width) {
-  html body #reviews .reviews_card .rating .stars {
+  html #reviews .reviews_card .rating .stars {
     font-size: 3.2rem;
   }
 }
-html body #reviews .reviews_card .rating .score {
+html #reviews .reviews_card .rating .score {
   font-size: 1.6rem;
   color: #2c3e3d;
 }
 @media (500px < width) {
-  html body #reviews .reviews_card .rating .score {
+  html #reviews .reviews_card .rating .score {
     font-size: 2.4rem;
   }
 }
-html body #reviews .reviews_card .review_read {
+html #reviews .reviews_card .review_read {
   font-size: 1.6rem;
   font-weight: 500;
   text-align: center;
   line-height: 1;
 }
 @media (500px < width) {
-  html body #reviews .reviews_card .review_read {
+  html #reviews .reviews_card .review_read {
     font-size: 2rem;
   }
 }
-html body #reviews .reviews_card .review_text {
+html #reviews .reviews_card .review_text {
   font-size: 1.4rem;
   line-height: 1.5;
 }
 @media (500px < width) {
-  html body #reviews .reviews_card .review_text {
+  html #reviews .reviews_card .review_text {
     font-size: 1.6rem;
   }
 }
-html body #reasons {
+html #reasons {
   margin: 0 auto;
   max-width: 600px;
   background-color: #f5f1ed;
   padding: 6rem 3rem;
 }
-html body #reasons .secTitle {
+html #reasons .secTitle {
   color: #1a1a1a;
   text-align: center;
   font-size: 2rem;
   font-size: 2.4rem;
 }
-html body #reasons .secTitle span {
+html #reasons .secTitle span {
   font-size: 2.4rem;
   line-height: 1;
   font-weight: 500;
   margin-bottom: 0.2em;
 }
 @media (500px < width) {
-  html body #reasons .secTitle span {
+  html #reasons .secTitle span {
     font-size: 3.2rem;
   }
 }
-html body #reasons .points {
+html #reasons .points {
   display: flex;
   justify-content: center;
   gap: 3rem;
   padding-block: 3rem 6rem;
   border-bottom: 1px solid #6b7c7a;
 }
-html body #reasons .points .icon {
+html #reasons .points .icon {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
-html body #reasons .points .icon .iconTitle01 {
+html #reasons .points .icon .iconTitle01 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #a8cddb;
   text-align: center;
 }
 @media (500px < width) {
-  html body #reasons .points .icon .iconTitle01 {
+  html #reasons .points .icon .iconTitle01 {
     font-size: 1.6rem;
   }
 }
-html body #reasons .points .icon .iconTitle02 {
+html #reasons .points .icon .iconTitle02 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #a8b5a0;
   text-align: center;
 }
 @media (500px < width) {
-  html body #reasons .points .icon .iconTitle02 {
+  html #reasons .points .icon .iconTitle02 {
     font-size: 1.6rem;
   }
 }
-html body #reasons .points .icon .iconTitle03 {
+html #reasons .points .icon .iconTitle03 {
   font-size: 1.4rem;
   font-weight: 700;
   color: #6b7c7a;
   text-align: center;
 }
 @media (500px < width) {
-  html body #reasons .points .icon .iconTitle03 {
+  html #reasons .points .icon .iconTitle03 {
     font-size: 1.6rem;
   }
 }
-html body #reasons .points .icon .iconImg {
+html #reasons .points .icon .iconImg {
   width: 10vw;
   max-width: 60px;
   min-width: 46px;
 }
-html body #reasons .points .icon .iconImg img {
+html #reasons .points .icon .iconImg img {
   width: 100%;
   height: auto;
   display: block;
 }
 @media (width > 600px) {
-  html body #reasons .points .icon .iconImg {
+  html #reasons .points .icon .iconImg {
     width: 60px;
   }
 }
 @media (width < 390px) {
-  html body #reasons .points .icon .iconImg {
+  html #reasons .points .icon .iconImg {
     width: 46px;
   }
 }
-html body #reasons .points .pointText {
+html #reasons .points .pointText {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-html body #reasons .points .pointText .point123 {
+html #reasons .points .pointText .point123 {
   font-size: 1.4rem;
   font-weight: 500;
   color: #a67d6d;
 }
 @media (500px < width) {
-  html body #reasons .points .pointText .point123 {
+  html #reasons .points .pointText .point123 {
     font-size: 1.6rem;
   }
 }
-html body #reasons .points .pointText h4 {
+html #reasons .points .pointText h4 {
   font-size: 1.6rem;
   font-weight: 500;
   font-size: 2rem;
 }
-html body #reasons .points .pointText .point_details {
+html #reasons .points .pointText .point_details {
   font-size: 1.4rem;
   line-height: 1.5;
 }
 @media (500px < width) {
-  html body #reasons .points .pointText .point_details {
+  html #reasons .points .pointText .point_details {
     font-size: 1.6rem;
   }
 }
-html body #reasons .accordion {
+html #reasons .accordion {
   list-style: none;
   border-bottom: 1px solid #6b7c7a;
 }
-html body #reasons .accordion li {
+html #reasons .accordion li {
   font-size: 1.4rem;
   color: #2c3e3d;
 }
 @media (500px < width) {
-  html body #reasons .accordion li {
+  html #reasons .accordion li {
     font-size: 1.6rem;
   }
 }
-html body #reasons .accordion-q button {
+html #reasons .accordion-q button {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1047,11 +1056,11 @@ html body #reasons .accordion-q button {
   color: #2c3e3d;
 }
 @media (500px < width) {
-  html body #reasons .accordion-q button {
+  html #reasons .accordion-q button {
     font-size: 2rem;
   }
 }
-html body #reasons .accordion-q-icon {
+html #reasons .accordion-q-icon {
   position: relative;
   width: 14px;
   height: 14px;
@@ -1060,48 +1069,48 @@ html body #reasons .accordion-q-icon {
   justify-content: center;
 }
 @media (500px < width) {
-  html body #reasons .accordion-q-icon {
+  html #reasons .accordion-q-icon {
     width: 18px;
     height: 18px;
   }
 }
-html body #reasons .accordion-q-icon::before,
-html body #reasons .accordion-q-icon::after {
+html #reasons .accordion-q-icon::before,
+html #reasons .accordion-q-icon::after {
   content: "";
   position: absolute;
   background: #6b7c7a;
   transition: transform 0.3s;
 }
-html body #reasons .accordion-q-icon::before {
+html #reasons .accordion-q-icon::before {
   width: 100%;
   height: 2px;
   inset: 0;
   margin: auto;
 }
-html body #reasons .accordion-q-icon::after {
+html #reasons .accordion-q-icon::after {
   width: 2px;
   height: 100%;
   inset: 0;
   margin: auto;
 }
-html body #reasons li.is-open .accordion-q-icon::after {
+html #reasons li.is-open .accordion-q-icon::after {
   transform: rotate(90deg);
 }
-html body #reasons .accordion-a {
+html #reasons .accordion-a {
   display: none;
   overflow: hidden;
 }
-html body #reasons .accordion-a-inner {
+html #reasons .accordion-a-inner {
   padding-block-end: 3rem;
   padding-inline: 1.6rem;
 }
-html body #reasons .accordion-a-inner ol {
+html #reasons .accordion-a-inner ol {
   margin: 0;
   padding-left: 1.2rem;
   line-height: 1.8;
   font-size: 15px;
 }
-html body #brand {
+html #brand {
   margin: 0 auto;
   max-width: 600px;
   background-color: #e8ddd3;
@@ -1109,14 +1118,14 @@ html body #brand {
   flex-direction: column;
   gap: 3rem;
 }
-html body #brand .loop {
+html #brand .loop {
   overflow: hidden;
   white-space: nowrap;
   position: relative;
   width: 100%;
   padding-block-start: 60px;
 }
-html body #brand .loop_text {
+html #brand .loop_text {
   font-size: 6.4rem;
   font-weight: 800;
   font-family: "Bodoni Moda", serif;
@@ -1127,7 +1136,7 @@ html body #brand .loop_text {
   line-height: 1;
 }
 @media (500px < width) {
-  html body #brand .loop_text {
+  html #brand .loop_text {
     font-size: 8rem;
   }
 }
@@ -1139,22 +1148,22 @@ html body #brand .loop_text {
     transform: translateX(-100%);
   }
 }
-html body #brand .brand_message {
+html #brand .brand_message {
   font-size: 1.6rem;
   line-height: 1.5;
   color: #2c3e3d;
   padding-inline: 3rem;
 }
 @media (500px < width) {
-  html body #brand .brand_message {
+  html #brand .brand_message {
     font-size: 2rem;
   }
 }
-html body #brand .brandImg {
+html #brand .brandImg {
   align-self: center;
   margin-inline: 3rem;
 }
-html body #brand #toTop {
+html #brand #toTop {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -1167,7 +1176,7 @@ html body #brand #toTop {
   justify-content: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-html body #brand #toTop::before {
+html #brand #toTop::before {
   content: "";
   width: 14px;
   height: 14px;
@@ -1176,45 +1185,45 @@ html body #brand #toTop::before {
   transform: rotate(45deg);
   margin-bottom: 3px;
 }
-html body #brand #toTop:hover {
+html #brand #toTop:hover {
   transform: translateY(-4px);
   opacity: 0.8;
 }
-html body #brand .sns {
+html #brand .sns {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.6rem;
 }
-html body #brand .sns p {
+html #brand .sns p {
   font-size: 1.4rem;
 }
 @media (500px < width) {
-  html body #brand .sns p {
+  html #brand .sns p {
     font-size: 1.6rem;
   }
 }
-html body #brand .sns .sns_icons {
+html #brand .sns .sns_icons {
   display: flex;
   gap: 6rem;
 }
-html body #brand .sns .sns_icons .x {
+html #brand .sns .sns_icons .x {
   max-width: 30px;
 }
-html body #brand .sns .sns_icons .x img {
+html #brand .sns .sns_icons .x img {
   width: 100%;
   height: auto;
   display: block;
 }
-html body #brand .sns .sns_icons .instagram {
+html #brand .sns .sns_icons .instagram {
   max-width: 32px;
 }
-html body #brand .sns .sns_icons .instagram img {
+html #brand .sns .sns_icons .instagram img {
   width: 100%;
   height: auto;
   display: block;
 }
-html body .footer {
+html .footer {
   margin: 0 auto;
   max-width: 600px;
   background-color: #e8ddd3;
@@ -1223,6 +1232,6 @@ html body .footer {
   flex-direction: column;
   align-items: center;
 }
-html body .footer small {
+html .footer small {
   padding-block-end: 1.6rem;
 }/*# sourceMappingURL=style.css.map */
