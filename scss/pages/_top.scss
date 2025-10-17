@@ -13,8 +13,6 @@ html {
     height: auto;
   }
   body {
-    // max-width: 390px;
-    margin: 0 auto;
     font-family: $mainTextFont;
 
     #fixUI {
@@ -23,949 +21,1046 @@ html {
       left: 0;
       width: 100vw;
       height: 100vh;
-      z-index: -100;
+      z-index: 0;
       background-image: linear-gradient(
         150deg,
         rgba(168, 205, 219, 0.7) 5%,
         rgba(168, 181, 160, 0.7) 88%
       );
-      pointer-events: none;
-        .fixTitle {
-          position: fixed;
-          top: 45%;
-          left: 3%;
-          z-index: -50;
-          font-size: 5vw;
-          color: rgba(255, 255, 255, 0.4);
-          font-family: $logoFont;
-        }
-        nav {
-          position: fixed;
-          top: 45%;
-          right: 3%;
 
-
-          display: flex;
-          flex-direction: column;
-          gap: 1.6rem;
-          pointer-events: auto;
-          li {
-            list-style: none;
-            font-size: 2.4rem;
-            color: rgba(255, 255, 255, 0.4);
-            a{
-              font-size: 3rem;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
-    // 固定ボタン
-    #purchase {
-      position: fixed;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 100;
-
-      width: 330px;
-      height: 61px;
-      display: flex;
-      align-items: flex-end;
-      border-radius: 5rem;
-      justify-content: space-between;
-      align-items: center;
-      padding-inline: 1.6rem;
-      background: linear-gradient(90deg, #ff5817, #ffea00);
-      background-size: 150% 100%;
-      background-position: left;
-      transition: background-position 0.3s ease-in-out;
-      font-size: 1.6rem;
-      color: $whiteTextColor;
-      @media (500px < width) {
-        font-size: 2rem;
-      }
-
-      .off {
-        font-size: 2.4rem;
-        font-size: 3rem;
-      }
-
-      .arrow {
-        font-size: 2.4rem;
-        font-size: 3rem;
-        align-self: center;
-      }
-    }
-    #purchase:hover {
-      background-position: right;
-    }
-
-    // ファーストビュー
-    #top {
-      margin: 0 auto;
-      padding: 3rem;
-      max-width: 600px;
-      height: 844px;
-      background-image: url('../images/topImg_s.png');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .logo {
-        align-self: flex-end;
-      }
-      .title {
-        font-size: 4.8rem;
-        font-weight: $bold;
-        color: $whiteTextColor;
-        text-align: center;
-        padding-top: 34px;
-
-        span {
-          display: block;
-          line-height: 1;
-          margin-bottom: 0.2em;
-        }
-
-        span:nth-child(2),
-        :last-child {
-          margin-bottom: 0;
-        }
-      }
-
-      .topText {
-        display: block;
-        font-size: 1.6rem;
-        font-weight: $regular;
-        line-height: 1.2;
-        margin-top: 1.6rem;
-        color: $whiteTextColor;
-        font-feature-settings: 'palt';
-        text-align: center;
-        @media (500px < width) {
-          font-size: 2.4rem;
-        }
-      }
-    }
-
-    // セクション01 写真のアニメーション
-    #product_concept {
-      max-width: 600px;
-      background-color: #e8ddd3;
-      margin: 0 auto;
-      padding-block: 6rem;
-
-      .concept_wraper {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        isolation: isolate;
-
-        .circle-bg {
-          position: absolute;
-          width: 330px;
-          height: 300px;
-          background-color: rgba(253, 251, 248, 0.65);
-          border-radius: 50%;
-          filter: blur(50px);
-          z-index: 0;
-        }
-
-        #conceptText {
-          position: relative;
-          text-align: center;
-          z-index: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-
-          .secTitle {
-            font-size: 2.4rem;
-            font-weight: $medium;
-            line-height: 1;
-            color: $titleColor;
-            text-align: center;
-            margin-bottom: 24px;
-            @media (500px < width) {
-              font-size: 3.2rem;
-            }
-          }
-
-          #conceptText,
-          p {
-            font-size: 1.6rem;
-            line-height: 2;
-            color: $textColor;
-            @media (500px < width) {
-              font-size: 2rem;
-            }
-          }
-        }
-      }
-
-      .imgContainer {
-        position: relative;
-        max-width: 600px;
-        height: 920px;
-        overflow: hidden;
-        margin-block-start: 6rem;
-        @media (500px > width) {
-          height: 750px;
-        }
-
-        #ani_item,
-        #ani_cica,
-        #ani_sea,
-        #ani_tangerine {
-          position: absolute;
-        }
-
-        #ani_item {
-          width: 50vw;
-          max-width: 300px;
-          min-width: 220px;
-          top: -3%;
-          left: 15%;
-          z-index: 1;
-
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
-        #ani_cica {
-          width: 50vw;
-          max-width: 300px;
-          min-width: 220px;
-          top: 23%;
-          left: 70%;
-          z-index: 3;
-          @media (450px > width) {
-            left: 78%;
-            top: 26%;
-          }
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
-        #ani_sea {
-          width: 58vw;
-          max-width: 350px;
-          min-width: 250px;
-          top: 48%;
-          left: -20%;
-          z-index: 3;
-          @media (550px > width) {
-            left: -25%;
-            top: 43%;
-          }
-          @media (500px > width) {
-            left: -30%;
-            top: 45%;
-          }
-
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
-        #ani_tangerine {
-          width: 50vw;
-          max-width: 300px;
-          min-width: 150px;
-          top: 56%;
-          left: 28%;
-          z-index: 2;
-          @media (550px > width) {
-            top: 55%;
-          }
-          img {
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-    }
-
-    // セクション02　skincare lineup
-    #line_up {
-      margin: 0 auto;
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      align-items: center;
-      padding-block: 6rem;
-      border-bottom: 1px solid $textColor;
-
-      gap: 3rem;
-      background-color: $mainbg02;
-      .line_up_heading {
-        font-size: 2.4rem;
-        font-weight: $bold;
-        color: $babygreen;
-        @media (500px < width) {
-          font-size: 3.2rem;
-        }
-      }
-      .line_up_lead {
-        font-size: 2.4rem;
-        font-weight: $medium;
-        text-align: center;
-        @media (500px < width) {
-          font-size: 3.2rem;
-        }
-      }
-      .line_up_text {
-        font-size: 1.6rem;
-        font-weight: $regular;
-        line-height: 2;
-        text-align: center;
-        @media (500px < width) {
-          font-size: 2rem;
-        }
-      }
-    }
-
-    // <!-- セクション03 商品紹介 -->
-    #product_card {
-      margin: 0 auto;
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-
-      display: flex;
-      flex-direction: column;
-      background-color: $mainbg02;
-      padding: 6rem 3rem;
-
-      #productImg {
-        width: auto;
-        align-self: center;
-
-        #productImg img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .product-details {
-        line-height: 1.5;
+      .left {
+        position: fixed;
+        top: 10%;
+        left: 3%;
+        z-index: 1;
         display: flex;
         flex-direction: column;
-
-        span:nth-child(1) {
-          font-size: 1.4rem;
-          color: $subTextColor;
-          line-height: 1;
-          @media (500px < width) {
+        gap: 5rem;
+        .fixTitle {
+          writing-mode: horizontal-tb;
+          opacity: 1;
+          transform: translateX(0);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+          @media (1200px > width) {
+            writing-mode: vertical-rl;
+            opacity: 1;
+            transform: translateY(-10px);
+            position: fixed;
+            top: 3%;
+            left: 1%;
           }
-          font-size: 1.6rem;
+          a {
+            font-size: 8rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: $logoFont;
+            text-decoration: none;
+            @media (1500px > width) {
+              font-size: 5rem;
+            }
+            @media (1200px > width) {
+              font-size: 9rem;
+            }
+          }
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          gap: 3.5rem;
+          pointer-events: auto;
+          opacity: 1;
+          transition: opacity 0.5s ease;
+
+          @media (1200px > width) {
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          li {
+            list-style: none;
+
+            a {
+              position: relative; /* 追加 */
+              font-size: 2.4rem;
+              text-decoration: none;
+              color: rgba(255, 255, 255);
+              display: inline-block; /* 追加 */
+
+              @media (1500px > width) {
+                font-size: 2rem;
+              }
+
+              /* アンダーラインのアニメーション */
+              &::after {
+                position: absolute;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: rgba(255, 255, 255, 1);
+                bottom: -5px;
+                transform: scaleX(0);
+                transition: transform 0.5s ease;
+                transform-origin: center;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+      .right {
+        position: fixed;
+        bottom: 10%;
+        right: 5%;
+        @media (1200px > width) {
+          right: 1%;
+          bottom: 1%;
         }
 
-        span:nth-child(2) {
-          font-size: 2rem;
+        p {
+          font-size: 6rem;
+          color: rgba(255, 255, 255, 0.4);
+          font-family: $logoFont;
+          writing-mode: horizontal-tb;
+          opacity: 1;
+          transform: translateX(0);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+
+          @media (1500px > width) {
+            font-size: 4rem;
+          }
+
+          @media (1200px > width) {
+            writing-mode: vertical-rl;
+            opacity: 1;
+            transform: translateY(-10px);
+            font-size: 6rem;
+          }
+
+          br {
+            @media (1200px > width) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 固定ボタン
+  #purchase {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    width: 330px;
+    height: 61px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.6rem;
+    background: linear-gradient(90deg, #ff5817, #ffea00);
+    background-size: 150% 100%;
+    background-position: left;
+    transition: background-position 0.3s ease-in-out;
+    font-size: 1.6rem;
+    color: $whiteTextColor;
+    @media (500px < width) {
+      font-size: 2rem;
+    }
+
+    .off {
+      font-size: 2.4rem;
+      font-size: 3rem;
+    }
+
+    .arrow {
+      font-size: 2.4rem;
+      font-size: 3rem;
+      align-self: center;
+    }
+  }
+  #purchase:hover {
+    background-position: right;
+  }
+  main {
+    #lp {
+      max-width: 600px;
+      margin-inline: auto;
+      position: relative;
+      z-index: 2;
+
+      // ファーストビュー
+      #top {
+        margin: 0 auto;
+        padding: 3rem;
+        max-width: 600px;
+        height: 844px;
+        background-image: url('../images/topImg_s.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo {
+          align-self: flex-end;
+        }
+        .title {
+          font-size: 4.8rem;
+          font-weight: $bold;
+          color: $whiteTextColor;
+          text-align: center;
+          padding-top: 34px;
+
+          span {
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.2em;
+          }
+
+          span:nth-child(2),
+          :last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .topText {
+          display: block;
+          font-size: 1.6rem;
+          font-weight: $regular;
+          line-height: 1.2;
+          margin-top: 1.6rem;
+          color: $whiteTextColor;
+          font-feature-settings: 'palt';
+          text-align: center;
           @media (500px < width) {
             font-size: 2.4rem;
           }
         }
+      }
 
-        span:nth-child(3) {
+      // セクション01 写真のアニメーション
+      #product_concept {
+        max-width: 600px;
+        background-color: #e8ddd3;
+        margin: 0 auto;
+        padding-block: 6rem;
+
+        .concept_wraper {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          isolation: isolate;
+
+          .circle-bg {
+            position: absolute;
+            width: 330px;
+            height: 300px;
+            background-color: rgba(253, 251, 248, 0.65);
+            border-radius: 50%;
+            filter: blur(50px);
+            z-index: 0;
+          }
+
+          #conceptText {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .secTitle {
+              font-size: 2.4rem;
+              font-weight: $medium;
+              line-height: 1;
+              color: $titleColor;
+              text-align: center;
+              margin-bottom: 24px;
+              @media (500px < width) {
+                font-size: 3.2rem;
+              }
+            }
+
+            #conceptText,
+            p {
+              font-size: 1.6rem;
+              line-height: 2;
+              color: $textColor;
+              @media (500px < width) {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+
+        .imgContainer {
+          position: relative;
+          max-width: 600px;
+          height: 920px;
+          overflow: hidden;
+          margin-block-start: 6rem;
+          @media (500px > width) {
+            height: 750px;
+          }
+
+          #ani_item,
+          #ani_cica,
+          #ani_sea,
+          #ani_tangerine {
+            position: absolute;
+          }
+
+          #ani_item {
+            width: 50vw;
+            max-width: 290px;
+            min-width: 220px;
+            top: -3%;
+            left: 15%;
+            z-index: 3;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          #ani_cica {
+            width: 50vw;
+            max-width: 300px;
+            min-width: 220px;
+            top: 23%;
+            left: 70%;
+            z-index: 5;
+            @media (450px > width) {
+              left: 78%;
+              top: 26%;
+            }
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          #ani_sea {
+            width: 58vw;
+            max-width: 350px;
+            min-width: 250px;
+            top: 48%;
+            left: -20%;
+            z-index: 5;
+            @media (550px > width) {
+              left: -25%;
+              top: 43%;
+            }
+            @media (500px > width) {
+              left: -30%;
+              top: 45%;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+          #ani_tangerine {
+            width: 50vw;
+            max-width: 280px;
+            min-width: 150px;
+            top: 50%;
+            left: 28%;
+            z-index: 4;
+            @media (550px > width) {
+              top: 55%;
+            }
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      // セクション02　skincare lineup
+      #line_up {
+        margin: 0 auto;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+        padding-block: 6rem;
+        border-bottom: 1px solid $textColor;
+
+        gap: 3rem;
+        background-color: $mainbg02;
+        .line_up_heading {
+          font-size: 2.4rem;
+          font-weight: $bold;
+          color: $babygreen;
+          @media (500px < width) {
+            font-size: 3.2rem;
+          }
+        }
+        .line_up_lead {
+          font-size: 2.4rem;
+          font-weight: $medium;
+          text-align: center;
+          @media (500px < width) {
+            font-size: 3.2rem;
+          }
+        }
+        .line_up_text {
           font-size: 1.6rem;
+          font-weight: $regular;
+          line-height: 2;
+          text-align: center;
           @media (500px < width) {
             font-size: 2rem;
           }
         }
       }
-      .product_prices {
+
+      // <!-- セクション03 商品紹介 -->
+      #product_card {
+        margin: 0 auto;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
-        margin-block-start: 2.4rem;
-        @media (500px < width) {
-          flex-direction: row;
-          align-items: end;
-          gap: 6rem;
-        }
 
-        .regular_price {
-          font-size: 1.6rem;
-          color: $subTextColor;
-          line-height: 1;
-          @media (500px < width) {
-            display: flex;
-            flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        background-color: $mainbg02;
+        padding-inline: 3rem;
+        padding-block-start: 6rem;
+
+        #productImg {
+          width: auto;
+          align-self: center;
+
+          #productImg img {
+            width: 100%;
+            height: 100%;
           }
+        }
+        .product-details {
+          line-height: 1.5;
+          display: flex;
+          flex-direction: column;
 
-          .old {
-            position: relative;
-            display: inline-block;
+          span:nth-child(1) {
+            font-size: 1.4rem;
+            color: $subTextColor;
+            line-height: 1;
             @media (500px < width) {
-              font-size: 3.2rem;
             }
-          }
-
-          .old::after {
-            content: '';
-            position: absolute;
-            left: -0.5em;
-            right: -0.5em;
-            top: 50%;
-            height: 1px;
-            background-color: $subTextColor;
-            transform: translateY(-50%);
-          }
-        }
-        .special_price {
-          font-size: 1.6rem;
-          color: $textColor;
-          line-height: 1;
-
-          @media (500px < width) {
-            display: flex;
-            flex-direction: column;
             font-size: 1.6rem;
           }
-          .new {
-            font-size: 3.6rem;
+
+          span:nth-child(2) {
+            font-size: 2rem;
             @media (500px < width) {
+              font-size: 2.4rem;
             }
-            font-size: 5.4rem;
+          }
+
+          span:nth-child(3) {
+            font-size: 1.6rem;
+            @media (500px < width) {
+              font-size: 2rem;
+            }
           }
         }
-      }
-    }
-
-    // <!-- セクション04 商品説明 -->
-    #product_text {
-      margin: 0 auto;
-      max-width: 600px;
-      background-color: $mainbg02;
-      display: flex;
-      flex-direction: column;
-      gap: 2.4rem;
-      padding-inline: 3rem;
-      padding-block-end: 6rem;
-      h2 {
-        font-size: 2rem;
-        font-weight: $medium;
-        line-height: 1.5;
-        @media (500px < width) {
-          font-size: 2.4rem;
-        }
-      }
-      p {
-        font-size: 1.6rem;
-        line-height: 2;
-        font-weight: $regular;
-        @media (500px < width) {
-          font-size: 2rem;
-        }
-      }
-    }
-
-    // <!-- セクション05 特徴成分 -->
-    #ingredients {
-      margin: 0 auto;
-      max-width: 600px;
-      background-color: $mainbg02;
-      padding-inline: 3rem;
-      padding-block-end: 6rem;
-      h3 {
-        display: inline-block;
-        font-size: 2rem;
-        line-height: 1;
-        font-weight: $regular;
-        padding-block-end: 3rem;
-      }
-      .ingredient_list {
-        display: flex;
-        flex-direction: column;
-        padding-block-end: 3rem;
-        border-bottom: 1px solid $subTextColor;
-      }
-      .ingredients_item {
-        display: flex;
-        gap: 3rem;
-        padding-block-end: 3rem;
-        .ingredients_img {
-          max-width: 200;
-          height: auto;
-          .ingredients_img img {
-            width: auto;
-            height: auto;
-          }
-        }
-        .ingredients_text {
+        .product_prices {
           display: flex;
           flex-direction: column;
           gap: 8px;
-          h4 {
+          margin-block-start: 2.4rem;
+          @media (500px < width) {
+            flex-direction: row;
+            align-items: end;
+            gap: 6rem;
+          }
+
+          .regular_price {
+            font-size: 1.6rem;
+            color: $subTextColor;
+            line-height: 1.25;
+            @media (500px < width) {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .old {
+              position: relative;
+              display: inline-block;
+              @media (500px < width) {
+                font-size: 3.2rem;
+              }
+            }
+
+            .old::after {
+              content: '';
+              position: absolute;
+              left: -0.5em;
+              right: -0.5em;
+              top: 50%;
+              height: 1px;
+              background-color: $subTextColor;
+              transform: translateY(-50%);
+            }
+          }
+          .special_price {
             font-size: 1.6rem;
             color: $textColor;
-            font-weight: $regular;
+            line-height: 1.2;
+
+            @media (500px < width) {
+              display: flex;
+              flex-direction: column;
+              font-size: 1.6rem;
+            }
+            .new {
+              font-size: 3.6rem;
+              @media (500px < width) {
+              }
+              font-size: 5.4rem;
+            }
+          }
+        }
+      }
+
+      // <!-- セクション04 商品説明 -->
+      #product_text {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: $mainbg02;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        padding-inline: 3rem;
+        padding-block: 6rem;
+        h2 {
+          font-size: 2rem;
+          font-weight: $medium;
+          line-height: 1.5;
+          @media (500px < width) {
+            font-size: 2.4rem;
+          }
+        }
+        p {
+          font-size: 1.6rem;
+          line-height: 2;
+          font-weight: $regular;
+          @media (500px < width) {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      // <!-- セクション05 特徴成分 -->
+      #ingredients {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: $mainbg02;
+        padding-inline: 3rem;
+        padding-block-end: 6rem;
+        h3 {
+          display: inline-block;
+          font-size: 2rem;
+          line-height: 1;
+          font-weight: $regular;
+          padding-block-end: 3rem;
+        }
+        .ingredient_list {
+          display: flex;
+          flex-direction: column;
+          padding-block-end: 3rem;
+          border-bottom: 1px solid $subTextColor;
+        }
+        .ingredients_item {
+          display: flex;
+          gap: 3rem;
+          padding-block-end: 3rem;
+          .ingredients_img {
+            max-width: 200;
+            height: auto;
+            .ingredients_img img {
+              width: auto;
+              height: auto;
+            }
+          }
+          .ingredients_text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            h4 {
+              font-size: 1.6rem;
+              color: $textColor;
+              font-weight: $regular;
+              line-height: 1;
+              @media (500px < width) {
+                font-size: 2rem;
+              }
+            }
+            p {
+              font-size: 1.4rem;
+              color: $subTextColor;
+              line-height: 1.5;
+              @media (500px < width) {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      // <!-- セクション06 口コミ -->
+      #reviews {
+        margin: 0 auto;
+        max-width: 600px;
+
+        background-image: url(../images/review_bg.png);
+        background-size: cover;
+        padding: 3rem;
+
+        .review_title {
+          display: block;
+          padding-block: 3rem;
+          text-align: center;
+          font-size: 2.4rem;
+          font-weight: $medium;
+          color: $titleColor;
+          @media (500px < width) {
+            font-size: 3.2rem;
+          }
+        }
+        .reviews_card {
+          background-color: $review;
+          padding: 2.4rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+          margin-block-end: 3rem;
+          .review_header {
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            .avatar {
+              background-color: $avatar;
+              width: 8rem;
+              height: 8rem;
+              aspect-ratio: 1/1;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 2.4rem;
+              color: $review;
+            }
+            .user {
+              display: flex;
+              flex-direction: column;
+              gap: 1.2rem;
+              .userName {
+                font-size: 1.6rem;
+                font-weight: $medium;
+                color: $textColor;
+                line-height: 1;
+                @media (500px < width) {
+                  font-size: 2.4rem;
+                }
+              }
+              .userMeta {
+                font-size: 1.4rem;
+                color: $textColor;
+                line-height: 1;
+                @media (500px < width) {
+                  font-size: 1.6rem;
+                }
+              }
+            }
+          }
+          .rating {
+            display: flex;
+            gap: 1.6rem;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            .stars {
+              font-size: 2rem;
+              color: $star;
+              @media (500px < width) {
+                font-size: 3.2rem;
+              }
+            }
+            .score {
+              font-size: 1.6rem;
+              color: $textColor;
+              @media (500px < width) {
+                font-size: 2.4rem;
+              }
+            }
+          }
+          .review_read {
+            font-size: 1.6rem;
+            font-weight: $medium;
+            text-align: center;
             line-height: 1;
             @media (500px < width) {
               font-size: 2rem;
             }
           }
-          p {
+          .review_text {
             font-size: 1.4rem;
-            color: $subTextColor;
             line-height: 1.5;
             @media (500px < width) {
-              font-size: 2rem;
+              font-size: 1.6rem;
             }
           }
         }
       }
-    }
 
-    // <!-- セクション06 口コミ -->
-    #reviews {
-      margin: 0 auto;
-      max-width: 600px;
+      // <!-- セクション07 選ばれる理由 アコーディオンメニュー -->
+      #reasons {
+        margin: 0 auto;
+        max-width: 600px;
 
-      background-image: url(../images/review_bg.png);
-      background-size: cover;
-      padding: 3rem;
-
-      .review_title {
-        display: block;
-        padding-block: 3rem;
-        text-align: center;
-        font-size: 2.4rem;
-        font-weight: $medium;
-        color: $titleColor;
-        @media (500px < width) {
-          font-size: 3.2rem;
-        }
-      }
-      .reviews_card {
-        background-color: $review;
-        padding: 2.4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        margin-block-end: 3rem;
-        .review_header {
-          display: flex;
-          gap: 3rem;
-          align-items: center;
-          .avatar {
-            background-color: $avatar;
-            width: 8rem;
-            height: 8rem;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        background-color: $mainbg02;
+        padding: 6rem 3rem;
+        .secTitle {
+          color: $titleColor;
+          text-align: center;
+          span {
             font-size: 2.4rem;
-            color: $review;
+            line-height: 1;
+            font-weight: $medium;
+            margin-bottom: 0.2em;
+            @media (500px < width) {
+              font-size: 3.2rem;
+            }
           }
-          .user {
+          font-size: 2rem;
+          @media (500px < width) {
+          }
+          font-size: 2.4rem;
+        }
+        .points {
+          display: flex;
+          justify-content: center;
+          gap: 3rem;
+          padding-block: 3rem 6rem;
+          border-bottom: 1px solid $subTextColor;
+          .icon {
             display: flex;
             flex-direction: column;
-            gap: 1.2rem;
-            .userName {
-              font-size: 1.6rem;
-              font-weight: $medium;
-              color: $textColor;
-              line-height: 1;
+            align-items: center;
+            gap: 8px;
+            .iconTitle01 {
+              font-size: 1.4rem;
+              font-weight: $bold;
+              color: $babyblue;
+              text-align: center;
               @media (500px < width) {
-                font-size: 2.4rem;
+                font-size: 1.6rem;
               }
             }
-            .userMeta {
+            .iconTitle02 {
               font-size: 1.4rem;
-              color: $textColor;
-              line-height: 1;
+              font-weight: $bold;
+              color: $babygreen;
+              text-align: center;
+              @media (500px < width) {
+                font-size: 1.6rem;
+              }
+            }
+            .iconTitle03 {
+              font-size: 1.4rem;
+              font-weight: $bold;
+              color: $subTextColor;
+              text-align: center;
+              @media (500px < width) {
+                font-size: 1.6rem;
+              }
+            }
+            .iconImg {
+              width: 10vw;
+              max-width: 60px;
+              min-width: 46px;
+
+              img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
+
+              @media (width > 600px) {
+                width: 60px;
+              }
+
+              @media (width < 390px) {
+                width: 46px;
+              }
+            }
+          }
+          .pointText {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            .point123 {
+              font-size: 1.4rem;
+              font-weight: $medium;
+              color: $point123;
+              @media (500px < width) {
+                font-size: 1.6rem;
+              }
+            }
+            h4 {
+              font-size: 1.6rem;
+              font-weight: $medium;
+              font-size: 2rem;
+            }
+            .point_details {
+              font-size: 1.4rem;
+              line-height: 1.5;
               @media (500px < width) {
                 font-size: 1.6rem;
               }
             }
           }
         }
-        .rating {
-          display: flex;
-          gap: 1.6rem;
-          align-items: center;
-          justify-content: center;
-          line-height: 1;
-          .stars {
-            font-size: 2rem;
-            color: $star;
-            @media (500px < width) {
-              font-size: 3.2rem;
-            }
-          }
-          .score {
-            font-size: 1.6rem;
+
+        // アコーディオンメニュー
+        .accordion {
+          list-style: none;
+          // border-top: 1px solid #ccc;
+          border-bottom: 1px solid $subTextColor;
+
+          li {
+            // border-bottom: 1px solid $star;
+            font-size: 1.4rem;
             color: $textColor;
             @media (500px < width) {
-              font-size: 2.4rem;
+              font-size: 1.6rem;
             }
           }
         }
-        .review_read {
+
+        .accordion-q button {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          padding-block: 3rem;
+          padding-inline: 1.6rem;
+          border: none;
+          background: none;
           font-size: 1.6rem;
-          font-weight: $medium;
-          text-align: center;
-          line-height: 1;
+          cursor: pointer;
+          position: relative;
+          color: $textColor;
           @media (500px < width) {
             font-size: 2rem;
           }
         }
-        .review_text {
-          font-size: 1.4rem;
-          line-height: 1.5;
+
+        .accordion-q-icon {
+          position: relative;
+          width: 14px;
+          height: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           @media (500px < width) {
-            font-size: 1.6rem;
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .accordion-q-icon::before,
+        .accordion-q-icon::after {
+          content: '';
+          position: absolute;
+          background: $subTextColor;
+          transition: transform 0.3s;
+        }
+
+        .accordion-q-icon::before {
+          width: 100%;
+          height: 2px;
+          inset: 0;
+          margin: auto;
+        }
+
+        .accordion-q-icon::after {
+          width: 2px;
+          height: 100%;
+          inset: 0;
+          margin: auto;
+        }
+
+        li.is-open .accordion-q-icon::after {
+          transform: rotate(90deg);
+        }
+
+        .accordion-a {
+          display: none;
+          overflow: hidden;
+        }
+
+        .accordion-a-inner {
+          padding-block-end: 3rem;
+          padding-inline: 1.6rem;
+
+          ol {
+            margin: 0;
+            padding-left: 1.2rem;
+            line-height: 1.8;
+            font-size: 15px;
           }
         }
       }
-    }
 
-    // <!-- セクション07 選ばれる理由 アコーディオンメニュー -->
-    #reasons {
-      margin: 0 auto;
-      max-width: 600px;
+      // <!-- セクション08 ブランド紹介 -->
+      #brand {
+        margin: 0 auto;
+        max-width: 600px;
 
-      background-color: $mainbg02;
-      padding: 6rem 3rem;
-      .secTitle {
-        color: $titleColor;
-        text-align: center;
-        span {
-          font-size: 2.4rem;
-          line-height: 1;
-          font-weight: $medium;
-          margin-bottom: 0.2em;
-          @media (500px < width) {
-            font-size: 3.2rem;
-          }
-        }
-        font-size: 2rem;
-        @media (500px < width) {
-        }
-        font-size: 2.4rem;
-      }
-      .points {
+        background-color: $mainbg;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         gap: 3rem;
-        padding-block: 3rem 6rem;
-        border-bottom: 1px solid $subTextColor;
-        .icon {
+
+        // loopテキスト
+        .loop {
+          overflow: hidden;
+          white-space: nowrap;
+          position: relative;
+          width: 100%;
+          padding-block-start: 60px;
+        }
+
+        .loop_text {
+          font-size: 6.4rem;
+          font-weight: 800;
+          font-family: $logoFont;
+          display: inline-block;
+          padding-right: 50px;
+          animation: loop 40s linear infinite;
+          color: $titleColor;
+          line-height: 1;
+          @media (500px < width) {
+            font-size: 8rem;
+          }
+        }
+
+        @keyframes loop {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+
+        .brand_message {
+          font-size: 1.6rem;
+          line-height: 1.5;
+          color: $textColor;
+          padding-inline: 3rem;
+          @media (500px < width) {
+            font-size: 2rem;
+          }
+        }
+        .brandImg {
+          align-self: center;
+          margin-inline: 3rem;
+        }
+        #toTop {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: $review;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+
+          // 中の矢印（::beforeで描く）
+          &::before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            border-left: 3px solid $mainbg; // 薄いベージュ
+            border-top: 3px solid $mainbg;
+            transform: rotate(45deg); // 斜め上向きに
+            margin-bottom: 3px;
+          }
+
+          &:hover {
+            transform: translateY(-4px);
+            opacity: 0.8;
+          }
+        }
+
+        .sns {
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 8px;
-          .iconTitle01 {
+          // padding-block-start: 3rem;
+          gap: 1.6rem;
+          p {
             font-size: 1.4rem;
-            font-weight: $bold;
-            color: $babyblue;
-            text-align: center;
             @media (500px < width) {
               font-size: 1.6rem;
             }
           }
-          .iconTitle02 {
-            font-size: 1.4rem;
-            font-weight: $bold;
-            color: $babygreen;
-            text-align: center;
-            @media (500px < width) {
-              font-size: 1.6rem;
+          .sns_icons {
+            display: flex;
+            gap: 6rem;
+            .x {
+              max-width: 30px;
+              img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
             }
-          }
-          .iconTitle03 {
-            font-size: 1.4rem;
-            font-weight: $bold;
-            color: $subTextColor;
-            text-align: center;
-            @media (500px < width) {
-              font-size: 1.6rem;
-            }
-          }
-          .iconImg {
-            width: 10vw;
-            max-width: 60px;
-            min-width: 46px;
-
-            img {
-              width: 100%;
-              height: auto;
-              display: block;
-            }
-
-            @media (width > 600px) {
-              width: 60px;
-            }
-
-            @media (width < 390px) {
-              width: 46px;
-            }
-          }
-        }
-        .pointText {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-          .point123 {
-            font-size: 1.4rem;
-            font-weight: $medium;
-            color: $point123;
-            @media (500px < width) {
-              font-size: 1.6rem;
-            }
-          }
-          h4 {
-            font-size: 1.6rem;
-            font-weight: $medium;
-            font-size: 2rem;
-          }
-          .point_details {
-            font-size: 1.4rem;
-            line-height: 1.5;
-            @media (500px < width) {
-              font-size: 1.6rem;
+            .instagram {
+              max-width: 32px;
+              img {
+                width: 100%;
+                height: auto;
+                display: block;
+              }
             }
           }
         }
       }
 
-      // アコーディオンメニュー
-      .accordion {
-        list-style: none;
-        // border-top: 1px solid #ccc;
-        border-bottom: 1px solid $subTextColor;
+      // <!-- コピーライトを入れる -->
+      .footer {
+        margin: 0 auto;
+        max-width: 600px;
 
-        li {
-          // border-bottom: 1px solid $star;
-          font-size: 1.4rem;
-          color: $textColor;
-          @media (500px < width) {
-            font-size: 1.6rem;
-          }
-        }
-      }
-
-      .accordion-q button {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        padding-block: 3rem;
-        padding-inline: 1.6rem;
-        border: none;
-        background: none;
-        font-size: 1.6rem;
-        cursor: pointer;
-        position: relative;
-        color: $textColor;
-        @media (500px < width) {
-          font-size: 2rem;
-        }
-      }
-
-      .accordion-q-icon {
-        position: relative;
-        width: 14px;
-        height: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @media (500px < width) {
-          width: 18px;
-          height: 18px;
-        }
-      }
-
-      .accordion-q-icon::before,
-      .accordion-q-icon::after {
-        content: '';
-        position: absolute;
-        background: $subTextColor;
-        transition: transform 0.3s;
-      }
-
-      .accordion-q-icon::before {
-        width: 100%;
-        height: 2px;
-        inset: 0;
-        margin: auto;
-      }
-
-      .accordion-q-icon::after {
-        width: 2px;
-        height: 100%;
-        inset: 0;
-        margin: auto;
-      }
-
-      li.is-open .accordion-q-icon::after {
-        transform: rotate(90deg);
-      }
-
-      .accordion-a {
-        display: none;
-        overflow: hidden;
-      }
-
-      .accordion-a-inner {
-        padding-block-end: 3rem;
-        padding-inline: 1.6rem;
-
-        ol {
-          margin: 0;
-          padding-left: 1.2rem;
-          line-height: 1.8;
-          font-size: 15px;
-        }
-      }
-    }
-
-    // <!-- セクション08 ブランド紹介 -->
-    #brand {
-      margin: 0 auto;
-      max-width: 600px;
-
-      background-color: $mainbg;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-
-      // loopテキスト
-      .loop {
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-        width: 100%;
-        padding-block-start: 60px;
-      }
-
-      .loop_text {
-        font-size: 6.4rem;
-        font-weight: 800;
-        font-family: $logoFont;
-        display: inline-block;
-        padding-right: 50px;
-        animation: loop 40s linear infinite;
-        color: $titleColor;
-        line-height: 1;
-        @media (500px < width) {
-          font-size: 8rem;
-        }
-      }
-
-      @keyframes loop {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
-      }
-
-      .brand_message {
-        font-size: 1.6rem;
-        line-height: 1.5;
-        color: $textColor;
-        padding-inline: 3rem;
-        @media (500px < width) {
-          font-size: 2rem;
-        }
-      }
-      .brandImg {
-        align-self: center;
-        margin-inline: 3rem;
-      }
-      #toTop {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: $review;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 0.3s ease, transform 0.3s ease;
-
-        // 中の矢印（::beforeで描く）
-        &::before {
-          content: '';
-          width: 14px;
-          height: 14px;
-          border-left: 3px solid $mainbg; // 薄いベージュ
-          border-top: 3px solid $mainbg;
-          transform: rotate(45deg); // 斜め上向きに
-          margin-bottom: 3px;
-        }
-
-        &:hover {
-          transform: translateY(-4px);
-          opacity: 0.8;
-        }
-      }
-
-      .sns {
+        background-color: $mainbg;
+        padding-block-start: 77px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        // padding-block-start: 3rem;
-        gap: 1.6rem;
-        p {
-          font-size: 1.4rem;
-          @media (500px < width) {
-            font-size: 1.6rem;
-          }
+        small {
+          padding-block-end: 1.6rem;
         }
-        .sns_icons {
-          display: flex;
-          gap: 6rem;
-          .x {
-            max-width: 30px;
-            img {
-              width: 100%;
-              height: auto;
-              display: block;
-            }
-          }
-          .instagram {
-            max-width: 32px;
-            img {
-              width: 100%;
-              height: auto;
-              display: block;
-            }
-          }
-        }
-      }
-    }
-
-    // <!-- コピーライトを入れる -->
-    .footer {
-      margin: 0 auto;
-      max-width: 600px;
-
-      background-color: $mainbg;
-      padding-block-start: 77px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      small {
-        padding-block-end: 1.6rem;
       }
     }
   }
-
+}

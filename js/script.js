@@ -17,7 +17,29 @@ document.addEventListener('DOMContentLoaded', function () {
     var rellax = new Rellax('.rellax');
   }
 
-  // アコーディオンメニュー
+  // 背景ロゴにトップに戻るボタンと同じ機能を持たせる
+  const logo = document.querySelector('.fixTitle a');
+  logo.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  // ナビゲーションメニュー
+  document.querySelectorAll('nav a[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const targetId = link.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        const targetPosition = targetSection.offsetTop;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth',
+        });
+      }
+    });
+  }); // アコーディオンメニュー
   document.querySelectorAll('.accordion').forEach((accordion) => {
     const props = {
       isAnimating: false,
@@ -110,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-
+  // totopボタン
   const toTopBtn = document.getElementById('toTop');
   toTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
