@@ -858,16 +858,28 @@ html main #lp #ingredients .ingredient_list {
 }
 html main #lp #ingredients .ingredients_item {
   display: flex;
-  gap: 3rem;
+  align-items: center;
+  gap: 1rem;
   padding-block-end: 3rem;
 }
-html main #lp #ingredients .ingredients_item .ingredients_img {
-  max-width: 200;
-  height: auto;
+@media (500px > width) {
+  html main #lp #ingredients .ingredients_item {
+    flex-direction: column;
+  }
 }
-html main #lp #ingredients .ingredients_item .ingredients_img .ingredients_img img {
-  width: auto;
-  height: auto;
+html main #lp #ingredients .ingredients_item .ingredients_img {
+  width: 330px;
+}
+@media (600px > width) {
+  html main #lp #ingredients .ingredients_item .ingredients_img {
+    width: 250px;
+  }
+}
+html main #lp #ingredients .ingredients_item .ingredients_img img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 html main #lp #ingredients .ingredients_item .ingredients_text {
   display: flex;
@@ -892,7 +904,7 @@ html main #lp #ingredients .ingredients_item .ingredients_text p {
 }
 @media (500px < width) {
   html main #lp #ingredients .ingredients_item .ingredients_text p {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 html main #lp #reviews {

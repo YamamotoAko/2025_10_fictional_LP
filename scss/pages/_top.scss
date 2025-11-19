@@ -585,14 +585,21 @@ html {
         }
         .ingredients_item {
           display: flex;
-          gap: 3rem;
+          align-items: center;
+          gap: 1rem;
           padding-block-end: 3rem;
+          @media (500px > width) {
+            flex-direction: column;
+          }
           .ingredients_img {
-            max-width: 200;
-            height: auto;
-            .ingredients_img img {
-              width: auto;
-              height: auto;
+            width: 330px;
+            @media (600px > width) {
+              width: 250px;
+            }
+            img {
+              width: 100%;
+              aspect-ratio: 4/3;
+              object-fit: cover;
             }
           }
           .ingredients_text {
@@ -613,7 +620,7 @@ html {
               color: $subTextColor;
               line-height: 1.5;
               @media (500px < width) {
-                font-size: 2rem;
+                font-size: 1.6rem;
               }
             }
           }
